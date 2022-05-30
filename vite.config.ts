@@ -16,8 +16,6 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue',
-        'vue/macros',
-        '@vueuse/core',
       ],
       dts: true,
     }),

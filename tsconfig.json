@@ -14,8 +14,7 @@
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "vite/client",
-      "vue/ref-macros"
+      "vite/client"
     ],
     "paths": {
       "~/*": ["src/*"]
