@@ -2,5 +2,8 @@
 </script>
 
 <template>
-  <Header />
+  <div class="py-11.5 px-69.5">
+    <Header />
+    <Page1 />
+  </div>
 </template>

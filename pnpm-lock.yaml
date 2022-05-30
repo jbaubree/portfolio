@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': 0.23.0
+  '@iconify-json/fa': ^1.1.1
+  '@iconify-json/fa-regular': ^1.1.1
   '@iconify-json/fa-solid': 1.1.1
   '@types/node': 17.0.32
   '@unocss/reset': ^0.33.2
@@ -24,6 +26,8 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.23.0_hcfsmds2fshutdssjqluwm76uu
+  '@iconify-json/fa': 1.1.1
+  '@iconify-json/fa-regular': 1.1.1
   '@iconify-json/fa-solid': 1.1.1
   '@types/node': 17.0.32
   '@unocss/reset': 0.33.2
@@ -199,8 +203,20 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/fa-regular/1.1.1:
+    resolution: {integrity: sha512-KFMX9DurKhOUpKqGlYRqlnCbcieEKo35961pnyf7NqUvHefBk1PZCU/kKbM2ib3piy8cn3V7RGvmZKq/INKGAA==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
   /@iconify-json/fa-solid/1.1.1:
     resolution: {integrity: sha512-Tfrcukcq8ywJ/Fc2dP8MZ6uKbOCfNA96uA3KxNFSLYX136mtlZ0LksuPw7BV8ukwDq9YEdjW95W+2Zx2ckRBrw==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify-json/fa/1.1.1:
+    resolution: {integrity: sha512-/j8U2vbuD8OdY21wue9Q1a7m9NNWvQ6UT4Ey4P41rlqwFZnDVWAGkYlUP4T19BmOZdY7M+odXiDwKksgA1RkBg==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
