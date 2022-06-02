@@ -2,6 +2,7 @@
 import type { PropType } from 'vue'
 import elipse from '~/assets/images/ellipse.svg'
 import cube from '~/assets/images/cube.svg'
+import arrowRight from '~/assets/images/arrow-right.svg'
 
 type Size = 'sm' | 'md' | 'lg'
 
@@ -20,6 +21,8 @@ const icon = computed(() => {
   switch (props.icon) {
     case 'cube':
       return cube
+    case 'arrow-right':
+      return arrowRight
     default:
       return undefined
   }
@@ -39,7 +42,7 @@ const elipseSize = computed(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative flex items-center justify-center">
     <img
       :src="elipse"
       alt="logo"
@@ -50,7 +53,8 @@ const elipseSize = computed(() => {
       }"
       :width="elipseSize"
       :height="elipseSize"
+      loading="lazy"
     >
-    <img v-if="props.icon" class="absolute top-0 left-0 w-full h-full" width="100%" height="100%" :src="icon" alt="logo-icon">
+    <img v-if="props.icon" class="absolute w-full h-full" width="100%" height="100%" :src="icon" alt="logo-icon" loading="lazy">
   </div>
 </template>
