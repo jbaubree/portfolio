@@ -31,7 +31,6 @@ const navItems = [
         v-for="navItem in navItems"
         :key="navItem.name"
         href="#"
-        class="text-1.25rem"
         :class="{ 'font-semibold': navItem.isActive }"
       >
         {{ navItem.name }}

@@ -5,10 +5,13 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Content: typeof import('./src/components/Content.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
-    Page1: typeof import('./src/components/Page1.vue')['default']
+    SkillCard: typeof import('./src/components/SkillCard.vue')['default']
     Socials: typeof import('./src/components/Socials.vue')['default']
+    Text: typeof import('./src/components/Text.vue')['default']
+    Title: typeof import('./src/components/Title.vue')['default']
   }
 }
 
