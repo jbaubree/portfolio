@@ -24,7 +24,7 @@ const navItems = [
 </script>
 
 <template>
-  <div class="flex items-center justify-between mb-40">
+  <Container class="flex items-center justify-between mb-40">
     <Logo size="sm" />
     <div class="flex gap-8">
       <a
@@ -36,5 +36,5 @@ const navItems = [
         {{ navItem.name }}
       </a>
     </div>
-  </div>
+  </Container>
 </template>

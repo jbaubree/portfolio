@@ -5,5 +5,5 @@
       <stop offset="1" stop-color="#fff" stop-opacity="0.302"/>
     </linearGradient>
   </defs>
-  <circle id="Ellipse" cx="30" cy="30" r="30" fill="url(#linear-gradient)"/>
+  <circle id="Elipse" cx="30" cy="30" r="30" fill="url(#linear-gradient)"/>
 </svg>

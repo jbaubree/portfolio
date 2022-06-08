@@ -1,5 +1,5 @@
 <template>
-  <p class="max-w-650px">
+  <div class="px-69.5">
     <slot />
-  </p>
+  </div>
 </template>
