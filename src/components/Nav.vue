@@ -22,8 +22,9 @@ const navItems = [
   },
 ]
 
-const offsets = ref<number[]>([])
 const pages = computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
+const offsets = computed(() => pages.value.map(page => page.offsetTop))
+
 const scrollToSection = (index: number) => {
   pages.value[index].scrollIntoView({
     behavior: 'smooth',
