@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import profile from '~/assets/images/profile.png'
-import cube from '~/assets/images/cube.svg'
+import arrowDown from '~/assets/images/arrow-down.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
+import block from '~/assets/images/block.svg'
+import cube from '~/assets/images/cube.svg'
 import digitsole from '~/assets/images/digitsole.svg'
 import portfolio from '~/assets/images/portfolio.svg'
+import profile from '~/assets/images/profile.png'
 import vite from '~/assets/images/vite.svg'
 
 const skills = [
@@ -31,6 +33,49 @@ const projects = [
   {
     image: vite,
     text: 'Vite',
+  },
+]
+
+const stack = [
+  {
+    name: 'Vue 3',
+    link: 'https://vuejs.org/',
+  },
+  {
+    name: 'Vite',
+    link: 'https://vitejs.dev/',
+  },
+  {
+    name: 'Typescript',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'VueUse',
+    link: 'https://vueuse.org/',
+  },
+  {
+    name: 'Pinia',
+    link: 'https://pinia.vuejs.org/',
+  },
+  {
+    name: 'UnoCSS',
+    link: 'https://github.com/unocss/unocss',
+  },
+  {
+    name: 'WindiCSS',
+    link: 'https://windicss.org/',
+  },
+  {
+    name: 'Vitest',
+    link: 'https://vitest.dev/',
+  },
+  {
+    name: 'Cypress',
+    link: 'https://www.cypress.io/',
+  },
+  {
+    name: 'Eslint',
+    link: 'https://eslint.org/',
   },
 ]
 </script>
@@ -107,6 +152,36 @@ const projects = [
         :image="project.image"
         :text="project.text"
       />
+    </div>
+  </div>
+
+  <div class="relative px-69.5 flex flex-col items-start gap-5 py-38">
+    <div class="absolute top--40 left--60">
+      <Logo size="lg" :icon="block" />
+    </div>
+    <Logo />
+    <Title>
+      Stack
+    </Title>
+    <Text>
+      Ma stack de prédiclection avec mes librairies préférées...
+    </Text>
+    <div class="grid grid-cols-2 w-full gap-x-20">
+      <a
+        v-for="stackItem, index in stack"
+        :key="index"
+        :href="stackItem.link"
+        target="_blank"
+        class="text-25 leading-22 font-bold uppercase opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center group"
+      >
+        {{ stackItem.name }}
+        <div
+          class="i-fa-link h-2rem w-2rem ml-1rem invisible group-hover:visible transition-opacity"
+        />
+      </a>
+    </div>
+    <div class="absolute right--30 bottom--80">
+      <Logo size="lg" :icon="arrowDown" />
     </div>
   </div>
 </template>
