@@ -1,40 +1,6 @@
-<script setup lang="ts">
-const navItems = [
-  {
-    name: 'Accueil',
-    isActive: true,
-  },
-  {
-    name: 'Compétences',
-    isActive: false,
-  },
-  {
-    name: 'Projets',
-    isActive: false,
-  },
-  {
-    name: 'Stack',
-    isActive: false,
-  },
-  {
-    name: 'Contact',
-    isActive: false,
-  },
-]
-</script>
-
 <template>
-  <Container class="flex items-center justify-between mb-40">
+  <Container class="flex items-center justify-between pt-11 mb-40">
     <Logo size="sm" />
-    <div class="flex gap-8">
-      <a
-        v-for="navItem in navItems"
-        :key="navItem.name"
-        href="#"
-        :class="{ 'font-semibold': navItem.isActive }"
-      >
-        {{ navItem.name }}
-      </a>
-    </div>
+    <Nav />
   </Container>
 </template>

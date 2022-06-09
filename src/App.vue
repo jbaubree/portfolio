@@ -2,8 +2,9 @@
 </script>
 
 <template>
-  <div class="py-11.5">
+  <div class="overflow-hidden">
     <Header />
     <Content />
+    <Footer />
   </div>
 </template>

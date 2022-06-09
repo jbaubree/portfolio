@@ -184,4 +184,28 @@ const stack = [
       <Logo size="lg" :icon="arrowDown" />
     </div>
   </div>
+
+  <div class="px-69.5 py-55 bg-light-200 flex justify-between items-center">
+    <div class="flex flex-col gap-5">
+      <Logo variant="blue" />
+      <Title class="text-primary">
+        Contact
+      </Title>
+      <Text class="text-gray-700">
+        Téléphone: +33 7 60 26 94 99
+        <br>
+        Email: jb.aubree@protonmail.com
+      </Text>
+    </div>
+    <div class="bg-white rounded-12 p-12 text-gray-700 shadow-2xl shadow-primary/30">
+      <div class="flex flex-col gap-8 items-center">
+        <input type="text" class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none" placeholder="Votre email">
+        <input type="text" class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none" placeholder="Votre nom">
+        <textarea rows="5" class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none resize-none" placeholder="Message" />
+        <button class="bg-primary rounded-8 px-25 py-6 text-white uppercase font-bold">
+          Envoyer
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
