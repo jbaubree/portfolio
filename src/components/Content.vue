@@ -166,7 +166,7 @@ const stack = [
     <Text>
       Ma stack de prédiclection avec mes librairies préférées...
     </Text>
-    <div class="grid grid-cols-2 w-full gap-x-20 gap-y-1px">
+    <div class="grid grid-cols-2 w-full gap-x-10 gap-y-1px">
       <a
         v-for="stackItem, index in stack"
         :key="index"
@@ -174,9 +174,9 @@ const stack = [
         target="_blank"
         class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center group"
       >
-        <span class="text-25 leading-22 font-bold uppercase overflow-hidden">{{ stackItem.name }}</span>
+        <span class="text-22 leading-20 font-bold uppercase overflow-hidden">{{ stackItem.name }}</span>
         <div
-          class="i-fa-link h-2rem w-2rem ml-1rem invisible group-hover:visible transition-opacity"
+          class="i-fa-link h-2rem w-2rem ml-0.5rem invisible group-hover:visible transition-opacity"
         />
       </a>
     </div>
