@@ -15,6 +15,12 @@ export default defineConfig({
     Vue({ reactivityTransform: true }),
     AutoImport({
       imports: [
+        {
+          '@vueuse/core': [
+            'useScroll',
+            'useScrollLock',
+          ],
+        },
         'vue',
       ],
       dts: true,

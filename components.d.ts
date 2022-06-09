@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     Container: typeof import('./src/components/Container.vue')['default']
     Content: typeof import('./src/components/Content.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    FullPage: typeof import('./src/components/FullPage.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     Nav: typeof import('./src/components/Nav.vue')['default']
