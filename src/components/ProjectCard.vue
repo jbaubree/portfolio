@@ -6,7 +6,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="min-w-300px min-h-300px w-300px h-300px rounded-8 overflow-hidden">
+  <div class="min-w-380px min-h-380px w-380px h-380px rounded-8 overflow-hidden">
     <img
       class="w-full h-full object-cover"
       :src="props.image"
