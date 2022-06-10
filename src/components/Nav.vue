@@ -23,19 +23,12 @@ const navItems = [
 ]
 
 const pages = computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
-const offsets = computed(() => pages.value.map(page => page.offsetTop))
 
 const scrollToSection = (index: number) => {
   pages.value[index].scrollIntoView({
     behavior: 'smooth',
   })
 }
-
-onMounted(() => {
-  pages.value.forEach((page) => {
-    offsets.value.push(page.offsetTop)
-  })
-})
 </script>
 
 <template>
