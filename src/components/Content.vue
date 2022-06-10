@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import arrowDown from '~/assets/images/arrow-down.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
+import atomTetra from '~/assets/images/atom-tetra.svg'
 import block from '~/assets/images/block.svg'
 import cube from '~/assets/images/cube.svg'
 import digitsole from '~/assets/images/digitsole.svg'
@@ -139,7 +140,7 @@ const stack = [
             />
           </div>
         </div>
-        <Logo size="lg" :icon="cube" class="z--1" />
+        <Logo size="lg" :icon="atomTetra" class="z--1" />
       </div>
     </Container>
   </FullPage>
