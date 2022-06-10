@@ -24,15 +24,18 @@ const skills = [
 const projects = [
   {
     image: portfolio,
-    text: 'Portfolio',
+    text: 'Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    link: 'https://github.com/jbaubree/portfolio/',
   },
   {
     image: digitsole,
-    text: 'Digitsole',
+    text: 'Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    link: 'https://app.digitsolepro.com/',
   },
   {
     image: vite,
-    text: 'Vite',
+    text: 'Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    link: 'https://github.com/jbaubree?tab=repositories&q=vite',
   },
 ]
 
@@ -157,6 +160,7 @@ const stack = [
           :key="index"
           :image="project.image"
           :text="project.text"
+          :link="project.link"
         />
       </div>
     </Container>
