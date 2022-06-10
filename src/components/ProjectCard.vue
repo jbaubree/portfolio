@@ -10,7 +10,7 @@ const props = defineProps<{
     <img
       class="w-full h-full object-cover"
       :src="props.image"
-      :alt="props.image.split('/').at(-1)?.split('.').at(0)"
+      :alt="imageNameFromPath(props.image)"
     >
   </div>
 </template>

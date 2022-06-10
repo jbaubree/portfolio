@@ -23,6 +23,10 @@ export default defineConfig({
         },
         'vue',
       ],
+      dirs: [
+        'src/utils',
+      ],
+      vueTemplate: true,
       dts: true,
     }),
     Components({
