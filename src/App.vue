@@ -1,3 +1,4 @@
 <template>
   <Content />
+  <Notification />
 </template>

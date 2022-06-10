@@ -17,8 +17,10 @@ export default defineConfig({
       imports: [
         {
           '@vueuse/core': [
+            'useEventBus',
             'useScroll',
             'useScrollLock',
+            'useToggle',
           ],
         },
         'vue',
