@@ -211,7 +211,7 @@ const stack = [
           Email: jb.aubree@protonmail.com
         </Text>
       </div>
-      <div class="bg-white rounded-12 p-12 text-gray-700 shadow-2xl shadow-primary/30">
+      <div class="z-10 bg-white rounded-12 p-12 text-gray-700 shadow-2xl shadow-primary/30">
         <ContactForm />
       </div>
     </Container>

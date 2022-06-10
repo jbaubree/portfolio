@@ -10,13 +10,13 @@ const form = ref({
   email: '',
   message: '',
 })
+const formData = ref(new FormData())
 
 type Form = typeof form.value
 
-const formData = new FormData()
 const { data, isLoading, execute } = useAxios('https://api.emailjs.com/api/v1.0/email/send-form', {
   method: 'POST',
-  data: formData,
+  data: formData.value,
 }, { immediate: false })
 
 watch(isLoading, (value) => {
@@ -30,9 +30,10 @@ watch(isLoading, (value) => {
 
 const sendEmail = () => {
   (Object.keys(form.value) as (keyof Form)[]).forEach((key: keyof Form) => {
-    formData.append(key, form.value[key])
+    formData.value.append(key, form.value[key])
   })
   execute()
+  formData.value = new FormData()
 }
 </script>
 
