@@ -22,6 +22,7 @@ specifiers:
   unplugin-vue-components: 0.19.6
   vite: 2.9.12
   vue: 3.2.37
+  vue-lazyload: 3.0.0-rc.2
   vue-tsc: 0.37.5
 
 dependencies:
@@ -48,6 +49,7 @@ devDependencies:
   unplugin-auto-import: 0.8.7_xnp3iobkgue47hz2kuxdzi7u6a
   unplugin-vue-components: 0.19.6_vite@2.9.12+vue@3.2.37
   vite: 2.9.12_sass@1.52.3
+  vue-lazyload: 3.0.0-rc.2
   vue-tsc: 0.37.5_typescript@4.7.3
 
 packages:
@@ -4337,6 +4339,10 @@ packages:
       semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-lazyload/3.0.0-rc.2:
+    resolution: {integrity: sha512-Cg7Gqb7jAoiImMPH3EMfAwJ8gZuFoBJCEtA7+TGRljrtktDtV7JAHIyKvuTgQR8DFAd7MhKi1Ys8QHdSrnGdZQ==}
     dev: true
 
   /vue-tsc/0.37.5_typescript@4.7.3:

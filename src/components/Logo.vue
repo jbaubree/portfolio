@@ -36,17 +36,23 @@ const elipseImage = computed(() => {
 <template>
   <div class="relative flex items-center justify-center">
     <img
-      :src="elipseImage"
+      v-lazy="elipseImage"
       alt="logo"
       :class="{
-        'min-w-15': props.size === 'sm',
-        'min-w-28': props.size === 'md',
-        'min-w-120': props.size === 'lg',
+        'hidden sm:flex min-w-15': props.size === 'sm',
+        'hidden sm:flex min-w-28': props.size === 'md',
+        'hidden md:flex md:min-w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
       }"
       :width="elipseSize"
       :height="elipseSize"
-      loading="lazy"
     >
-    <img v-if="props.icon" class="absolute w-full h-full" width="100%" height="100%" :src="props.icon" :alt="props.icon.split('/').at(-1)?.split('.').at(0)" loading="lazy">
+    <img
+      v-if="props.icon"
+      v-lazy="props.icon"
+      class="absolute w-full h-full"
+      width="100%"
+      height="100%"
+      :alt="props.icon.split('/').at(-1)?.split('.').at(0)"
+    >
   </div>
 </template>

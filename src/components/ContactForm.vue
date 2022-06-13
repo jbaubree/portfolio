@@ -42,17 +42,26 @@ const sendEmail = () => {
     <input
       v-model="form.email"
       type="text"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none" placeholder="Votre email"
+      class="w-full bg-light-200 rounded-8 p-6 min-w-200px outline-none"
+      md="min-w-300px"
+      lg="min-w-500px"
+      placeholder="Votre email"
     >
     <input
       v-model="form.name"
       type="text"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none" placeholder="Votre nom"
+      class="w-full bg-light-200 rounded-8 p-6 min-w-200px outline-none"
+      md="min-w-300px"
+      lg="min-w-500px"
+      placeholder="Votre nom"
     >
     <textarea
       v-model="form.message"
       rows="5"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-500px outline-none resize-none" placeholder="Message"
+      class="w-full bg-light-200 rounded-8 p-6 min-w-200px outline-none resize-none"
+      md="min-w-300px"
+      lg="min-w-500px"
+      placeholder="Message"
     />
     <button
       class="flex items-center justify-center w-280px h-72px bg-primary rounded-8 px-25 py-6 text-white uppercase font-bold"

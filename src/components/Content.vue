@@ -25,17 +25,17 @@ const skills = [
 const projects = [
   {
     image: portfolio,
-    text: 'Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    text: 'Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: 'https://github.com/jbaubree/portfolio/',
   },
   {
     image: digitsole,
-    text: 'Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    text: 'Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: 'https://app.digitsolepro.com/',
   },
   {
     image: vite,
-    text: 'Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    text: 'Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     link: 'https://github.com/jbaubree?tab=repositories&q=vite',
   },
 ]
@@ -88,7 +88,7 @@ const stack = [
   <Header />
   <FullPage>
     <Container>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between gap-5">
         <div class="flex flex-col gap-10">
           <Text>Travail avec passion</Text>
           <Title>Développement & intégration de web applications</Title>
@@ -99,30 +99,32 @@ const stack = [
     </Container>
   </FullPage>
 
-  <Container class="mb-60">
-    <div class="relative">
-      <div class="absolute top-0 left--120">
-        <Logo size="lg" :icon="arrowRight" />
-      </div>
-      <div class="relative bg-secondary pl-325px pr-24 py-29 rounded-12 flex overflow-hidden">
-        <img :src="profile" alt="profile-picture" width="450" height="600" class="absolute bottom--30 left--20" loading="lazy">
-        <div class="flex flex-col gap-5">
-          <Text>Développeur front-end</Text>
-          <Title>
-            Bonjour, je m'appelle Jean-Baptiste AUBRÉE
-          </Title>
-          <Text>
-            Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br>
-            Mon langage de prédilection: <span class="font-semibold">VueJS</span>.
-          </Text>
+  <div class="flex justify-center px-10">
+    <Container class="mb-60">
+      <div class="relative">
+        <div class="absolute top-0 left--100">
+          <Logo size="lg" :icon="arrowRight" />
+        </div>
+        <div class="relative bg-secondary md:pl-325px px-24 py-29 rounded-12 flex overflow-hidden">
+          <img v-lazy="profile" alt="profile-picture" width="450" height="600" class="absolute bottom--30 left--20 hidden md-block">
+          <div class="flex flex-col gap-5">
+            <Text>Développeur front-end</Text>
+            <Title>
+              Bonjour, je m'appelle Jean-Baptiste AUBRÉE
+            </Title>
+            <Text>
+              Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br>
+              Mon langage de prédilection: <span class="font-semibold">VueJS</span>.
+            </Text>
+          </div>
         </div>
       </div>
-    </div>
-  </Container>
+    </Container>
+  </div>
 
   <FullPage>
     <Container>
-      <div class="flex items-center justify-between gap-5">
+      <div class="flex items-center justify-center lg:justify-between gap-5">
         <div class="flex flex-col items-start gap-5">
           <Logo />
           <Title>Compétences</Title>
@@ -130,7 +132,7 @@ const stack = [
             Je développe au quotidien des applications et fonctionnalités performantes, rapides, intuitives et ergonomiques en respectant au maximum les bonnes pratiques de développement.
             Bien que je sois autonome sur du back-end, de l'infrastructure ou du design, mon principal domaine d'expertise reste le front-end.
           </Text>
-          <div class="flex gap-12 items-start flex-wrap">
+          <div class="flex gap-5 items-start">
             <SkillCard
               v-for="skill, index in skills"
               :key="index"
@@ -140,7 +142,7 @@ const stack = [
             />
           </div>
         </div>
-        <Logo size="lg" :icon="atomTetra" class="z--1" />
+        <Logo size="lg" :icon="atomTetra" class="z--1 !hidden !lg:flex" />
       </div>
     </Container>
   </FullPage>
@@ -155,7 +157,7 @@ const stack = [
         Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler.
         Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
       </Text>
-      <div class="w-full flex gap-8">
+      <div class="w-full flex gap-8 flex-wrap justify-center">
         <ProjectCard
           v-for="project, index in projects"
           :key="index"
@@ -179,7 +181,7 @@ const stack = [
       <Text>
         Ma stack de prédiclection avec mes librairies préférées...
       </Text>
-      <div class="grid grid-cols-2 w-full gap-x-10 gap-y-1px">
+      <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-x-10 gap-y-1px">
         <a
           v-for="stackItem, index in stack"
           :key="index"
@@ -187,7 +189,13 @@ const stack = [
           target="_blank"
           class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center group"
         >
-          <span class="text-22 leading-20 font-bold uppercase overflow-hidden">{{ stackItem.name }}</span>
+          <span
+            class="text-15 leading-13 font-bold uppercase overflow-hidden"
+            lg="text-17 leading-15"
+            xl="text-20 leading-18"
+          >
+            {{ stackItem.name }}
+          </span>
           <div
             class="i-fa-link h-2rem w-2rem ml-0.5rem invisible group-hover:visible transition-opacity"
           />
@@ -200,8 +208,8 @@ const stack = [
   </FullPage>
 
   <FullPage class="bg-light-200">
-    <Container class="flex justify-between items-center w-full">
-      <div class="flex flex-col gap-5">
+    <Container class="flex flex-col md:flex-row justify-between items-center w-full gap-8">
+      <div class="flex flex-col items-start gap-5">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact

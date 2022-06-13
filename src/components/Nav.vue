@@ -32,12 +32,12 @@ const scrollToSection = (index: number) => {
 </script>
 
 <template>
-  <div class="flex gap-8">
+  <div class="flex gap-6 md:gap-8">
     <a
       v-for="navItem, index in navItems"
       :key="navItem.name"
       href="#"
-      class="transition-shadow shadow-weight"
+      class="transition-shadow shadow-weight md:text-1rem text-sm"
       @click.stop.prevent="scrollToSection(index)"
     >
       {{ navItem.name }}

@@ -1,8 +1,10 @@
 <template>
-  <div class="relative">
-    <Container class="absolute w-full flex items-center justify-between pt-11">
-      <Logo size="sm" />
-      <Nav />
-    </Container>
+  <div class="px-10">
+    <div class="relative flex justify-center">
+      <Container class="absolute flex items-center justify-between pt-11">
+        <Logo size="sm" />
+        <Nav />
+      </Container>
+    </div>
   </div>
 </template>

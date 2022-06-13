@@ -7,14 +7,14 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="bg-secondary p-12 rounded-12 flex flex-col gap-8 w-21rem">
+  <div class="bg-secondary p-10 rounded-10 flex flex-col gap-8 max-w-18rem">
     <span class="font-bold text-3rem leading-none">{{ props.title }}</span>
     <Text>{{ props.text }}</Text>
-    <div class="flex gap-4 flex-wrap">
+    <div class="flex gap-2 flex-wrap">
       <div
         v-for="tag in props.tags"
         :key="tag"
-        class="text-primary whitespace-nowrap bg-white px-3 py-1.5 rounded-3 font-bold"
+        class="text-primary whitespace-nowrap bg-white px-2 py-1 rounded-3 font-bold"
       >
         {{ tag }}
       </div>
