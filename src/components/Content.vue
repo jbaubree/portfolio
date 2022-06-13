@@ -6,7 +6,7 @@ import block from '~/assets/images/block.svg'
 import cube from '~/assets/images/cube.svg'
 import digitsole from '~/assets/images/digitsole.svg'
 import portfolio from '~/assets/images/portfolio.svg'
-import profile from '~/assets/images/profile.png'
+import profile from '~/assets/images/profile.webp'
 import vite from '~/assets/images/vite.svg'
 
 const skills = [
