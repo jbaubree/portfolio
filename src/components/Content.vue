@@ -105,7 +105,7 @@ const stack = [
         <div class="absolute top-0 left--100">
           <Logo size="lg" :icon="arrowRight" />
         </div>
-        <div class="relative bg-secondary md:pl-325px px-24 py-29 rounded-12 flex overflow-hidden">
+        <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
           <img v-lazy="profile" alt="profile-picture" width="450" height="600" class="absolute bottom--30 left--20 hidden md-block">
           <div class="flex flex-col gap-5">
             <Text>Développeur front-end</Text>
@@ -157,7 +157,7 @@ const stack = [
         Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler.
         Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
       </Text>
-      <div class="w-full flex gap-8 flex-wrap justify-center">
+      <div class="w-full flex gap-8 flex-wrap justify-start">
         <ProjectCard
           v-for="project, index in projects"
           :key="index"
@@ -190,7 +190,7 @@ const stack = [
           class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center group"
         >
           <span
-            class="text-15 leading-13 font-bold uppercase overflow-hidden"
+            class="text-13 leading-11 font-bold uppercase overflow-hidden"
             lg="text-17 leading-15"
             xl="text-20 leading-18"
           >
@@ -209,7 +209,7 @@ const stack = [
 
   <FullPage class="bg-light-200">
     <Container class="flex flex-col md:flex-row justify-between items-center w-full gap-8">
-      <div class="flex flex-col items-start gap-5">
+      <div class="flex flex-col items-center md:items-start gap-5">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact

@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="max-w-200px md:max-w-250px lg:max-w-300px xl:max-w-350px rounded-8 overflow-hidden group relative">
+  <div class="max-w-250px lg:max-w-300px xl:max-w-350px rounded-8 overflow-hidden group relative">
     <img
       class="w-full h-full object-cover"
       :src="props.image"
