@@ -157,7 +157,7 @@ const stack = [
         Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler.
         Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
       </Text>
-      <div class="w-full flex gap-8 flex-wrap justify-start">
+      <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start">
         <ProjectCard
           v-for="project, index in projects"
           :key="index"
