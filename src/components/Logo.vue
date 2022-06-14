@@ -41,6 +41,7 @@ const elipseImage = computed(() => {
     <img
       v-lazy="elipseImage"
       alt="logo"
+      fetchpriority="high"
       :class="{
         'hidden sm:flex min-w-15': props.size === 'sm',
         'hidden sm:flex min-w-28': props.size === 'md',

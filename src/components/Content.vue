@@ -105,6 +105,7 @@ const stack = [
           <img
             v-lazy="profile"
             alt="profile-picture"
+            fetchpriority="high"
             width="450"
             height="600"
             class="absolute bottom--30 left--20 hidden md-block"

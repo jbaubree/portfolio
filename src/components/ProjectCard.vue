@@ -12,6 +12,7 @@ const props = defineProps<{
       class="w-full h-full object-cover"
       :src="props.image"
       :alt="imageNameFromPath(props.image)"
+      fetchpriority="high"
     >
     <a
       :href="props.link"
