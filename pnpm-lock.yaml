@@ -26,7 +26,6 @@ specifiers:
   vite: 2.9.12
   vite-plugin-sitemap: 0.1.4
   vue: 3.2.37
-  vue-lazyload: 3.0.0-rc.2
   vue-tsc: 0.37.5
 
 dependencies:
@@ -57,7 +56,6 @@ devDependencies:
   unplugin-vue-components: 0.19.6_vite@2.9.12+vue@3.2.37
   vite: 2.9.12_sass@1.52.3
   vite-plugin-sitemap: 0.1.4
-  vue-lazyload: 3.0.0-rc.2
   vue-tsc: 0.37.5_typescript@4.7.3
 
 packages:
@@ -4369,10 +4367,6 @@ packages:
       semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vue-lazyload/3.0.0-rc.2:
-    resolution: {integrity: sha512-Cg7Gqb7jAoiImMPH3EMfAwJ8gZuFoBJCEtA7+TGRljrtktDtV7JAHIyKvuTgQR8DFAd7MhKi1Ys8QHdSrnGdZQ==}
     dev: true
 
   /vue-tsc/0.37.5_typescript@4.7.3:

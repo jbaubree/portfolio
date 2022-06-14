@@ -103,7 +103,7 @@ const stack = [
         </div>
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
           <img
-            v-lazy="profile"
+            :src="profile"
             alt="profile-picture"
             fetchpriority="high"
             width="450"

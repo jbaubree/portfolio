@@ -39,7 +39,7 @@ const elipseImage = computed(() => {
 <template>
   <div class="relative flex items-center justify-center">
     <img
-      v-lazy="elipseImage"
+      :src="elipseImage"
       alt="logo"
       fetchpriority="high"
       :class="{
