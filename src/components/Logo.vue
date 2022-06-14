@@ -76,13 +76,5 @@ const elipseImage = computed(() => {
         </component>
       </Scene>
     </Renderer>
-    <!-- <img
-      v-if="props.icon"
-      v-lazy="props.icon"
-      class="absolute w-full h-full"
-      width="100%"
-      height="100%"
-      :alt="props.icon.split('/').at(-1)?.split('.').at(0)"
-    > -->
   </div>
 </template>
