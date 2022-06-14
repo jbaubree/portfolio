@@ -106,7 +106,14 @@ const stack = [
           <Logo size="lg" :icon="arrowRight" />
         </div>
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
-          <img v-lazy="profile" alt="profile-picture" width="450" height="600" class="absolute bottom--30 left--20 hidden md-block">
+          <img
+            v-lazy="profile"
+            alt="profile-picture"
+            width="450"
+            height="600"
+            class="absolute bottom--30 left--20 hidden md-block"
+            style="filter: sepia(35%) hue-rotate(195deg) saturate(500%);"
+          >
           <div class="flex flex-col gap-5">
             <Text>Développeur front-end</Text>
             <Title>
