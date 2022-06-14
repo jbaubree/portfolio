@@ -6,6 +6,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.0.2
   '@iconify-json/fa': ^1.1.1
   '@types/node': 17.0.42
+  '@types/three': ^0.141.0
   '@unocss/reset': ^0.38.2
   '@vitejs/plugin-vue': 2.3.3
   '@vueuse/core': 8.6.0
@@ -16,6 +17,8 @@ specifiers:
   pnpm: 7.2.1
   sass: 1.52.3
   simple-git-hooks: ^2.8.0
+  three: ^0.141.0
+  troisjs: ^0.3.4
   typescript: 4.7.3
   unocss: 0.38.2
   unplugin-auto-import: 0.8.7
@@ -36,6 +39,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.0.2
   '@iconify-json/fa': 1.1.1
   '@types/node': 17.0.42
+  '@types/three': 0.141.0
   '@unocss/reset': 0.38.2
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
   axios: 0.27.2
@@ -44,6 +48,8 @@ devDependencies:
   pnpm: 7.2.1
   sass: 1.52.3
   simple-git-hooks: 2.8.0
+  three: 0.141.0
+  troisjs: 0.3.4
   typescript: 4.7.3
   unocss: 0.38.2_vite@2.9.12
   unplugin-auto-import: 0.8.7_xnp3iobkgue47hz2kuxdzi7u6a
@@ -517,8 +523,18 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
+  /@types/three/0.141.0:
+    resolution: {integrity: sha512-OJdKDgTPVBUgc+s74DYoy4aLznbFFC38Xm4ElmU1YwGNgR7GGFVvFCX7lpVgOsT6S1zSJtGdajTsOYE8/xY9nA==}
+    dependencies:
+      '@types/webxr': 0.4.0
+    dev: true
+
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@types/webxr/0.4.0:
+    resolution: {integrity: sha512-LQvrACV3Pj17GpkwHwXuTd733gfY+D7b9mKdrTmLdO7vo7P/o6209Qqtk63y/FCv/lspdmi0pWz6Qe/ull9kQg==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.27.0_kor2e3kwnnzugzo3aovmfcq2la:
@@ -3969,6 +3985,10 @@ packages:
     resolution: {integrity: sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=}
     dev: true
 
+  /three/0.141.0:
+    resolution: {integrity: sha512-JaSDAPWuk4RTzG5BYRQm8YZbERUxTfTDVouWgHMisS2to4E5fotMS9F2zPFNOIJyEFTTQDDKPpsgZVThKU3pXA==}
+    dev: true
+
   /through/2.3.8:
     resolution: {integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=}
     dev: true
@@ -3998,6 +4018,10 @@ packages:
   /trim-newlines/3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
+    dev: true
+
+  /troisjs/0.3.4:
+    resolution: {integrity: sha512-aonG2lw+QyTjytJpvYIaGv2AiIKzm+eSYT4ByG64uVh+jCLAWxnblS6bCewIckvCMqs2j3z351Q/IFIPWYViCQ==}
     dev: true
 
   /ts-node/10.8.1_wpmar7q2se7jlmxe5wggegnl2m:

@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import arrowDown from '~/assets/images/arrow-down.svg'
-import arrowRight from '~/assets/images/arrow-right.svg'
-import atomTetra from '~/assets/images/atom-tetra.svg'
-import block from '~/assets/images/block.svg'
-import cube from '~/assets/images/cube.svg'
+import { Box, Cone, Icosahedron, Tetrahedron, TorusKnot } from 'troisjs'
 import digitsole from '~/assets/images/digitsole.svg'
 import portfolio from '~/assets/images/portfolio.svg'
 import profile from '~/assets/images/profile.webp'
@@ -94,7 +90,7 @@ const stack = [
           <Title>Développement & intégration de web applications</Title>
           <Socials />
         </div>
-        <Logo size="lg" :icon="cube" />
+        <Logo size="lg" :icon="Box" />
       </div>
     </Container>
   </FullPage>
@@ -103,7 +99,7 @@ const stack = [
     <Container class="mb-60">
       <div class="relative">
         <div class="absolute top-0 left--100">
-          <Logo size="lg" :icon="arrowRight" />
+          <Logo size="lg" :icon="Cone" />
         </div>
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
           <img
@@ -149,7 +145,7 @@ const stack = [
             />
           </div>
         </div>
-        <Logo size="lg" :icon="atomTetra" class="z--1 !hidden !lg:flex" />
+        <Logo size="lg" :icon="Tetrahedron" class="z--1 !hidden !lg:flex" />
       </div>
     </Container>
   </FullPage>
@@ -179,7 +175,7 @@ const stack = [
   <FullPage class="relative flex flex-col items-start gap-5">
     <Container class="flex items-start flex-col gap-5">
       <div class="absolute top--40 left--60">
-        <Logo size="lg" :icon="block" />
+        <Logo size="lg" :icon="Icosahedron" />
       </div>
       <Logo />
       <Title>
@@ -209,7 +205,7 @@ const stack = [
         </a>
       </div>
       <div class="absolute right--30 bottom--80">
-        <Logo size="lg" :icon="arrowDown" />
+        <Logo size="lg" :icon="TorusKnot" />
       </div>
     </Container>
   </FullPage>

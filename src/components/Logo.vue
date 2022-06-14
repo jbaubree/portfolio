@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { DoubleSide } from 'three'
+import { AmbientLight, Camera, PhongMaterial, PointLight, Renderer, Scene } from 'troisjs'
+import type { Component } from 'vue'
 import elipse from '~/assets/images/elipse.svg'
 import elipseBlue from '~/assets/images/elipse-blue.svg'
 
 const props = withDefaults(defineProps<{
-  icon?: string
+  icon?: Component
   size?: 'sm' | 'md' | 'lg'
   variant?: 'blue' | 'white'
 }>(), {
@@ -46,13 +49,39 @@ const elipseImage = computed(() => {
       :width="elipseSize"
       :height="elipseSize"
     >
-    <img
+    <Renderer
+      v-if="props.icon"
+      ref="renderer"
+      class="absolute"
+      width="200%"
+      height="200%"
+      :pixel-ratio="2"
+      antialias
+      alpha
+      :orbit-ctrl="{ enableZoom: false, autoRotate: true, autoRotateSpeed: 6, enableDamping: true, dampingFactor: 0.05 }"
+    >
+      <Camera
+        :position="{
+          x: props.icon?.name === 'Cone' ? 2 : 1,
+          y: props.icon?.name === 'Cone' ? 3 : 2,
+          z: props.icon?.name === 'TorusKnot' ? 6 : 2,
+        }"
+      />
+      <Scene>
+        <AmbientLight color="#808080" />
+        <PointLight :position="{ y: 10, z: 10 }" />
+        <component :is="icon" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
+          <PhongMaterial color="#ea9804" :props="{ side: DoubleSide }" />
+        </component>
+      </Scene>
+    </Renderer>
+    <!-- <img
       v-if="props.icon"
       v-lazy="props.icon"
       class="absolute w-full h-full"
       width="100%"
       height="100%"
       :alt="props.icon.split('/').at(-1)?.split('.').at(0)"
-    >
+    > -->
   </div>
 </template>
