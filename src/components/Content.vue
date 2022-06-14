@@ -146,7 +146,7 @@ const stack = [
             />
           </div>
         </div>
-        <Logo size="lg" :icon="Tetrahedron" class="z--1 !hidden !lg:flex" />
+        <Logo size="lg" :icon="Tetrahedron" class="!hidden !lg:flex" />
       </div>
     </Container>
   </FullPage>
