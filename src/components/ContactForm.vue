@@ -20,7 +20,7 @@ const { data, isLoading, execute } = useAxios('https://api.emailjs.com/api/v1.0/
 }, { immediate: false })
 
 watch(isLoading, (value) => {
-  if (!value && data.value) {
+  if (!value) {
     bus.emit(data.value)
     form.value.name = ''
     form.value.email = ''

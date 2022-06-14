@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const bus = useEventBus<string>('contact-form')
-const notifications = ref<{ message: string; popped: boolean; id: number }[]>([])
+const notifications = ref<{ isSuccess: boolean; popped: boolean; id: number }[]>([])
 const id = ref(0)
 
 const togglePopNotification = (id: number) => {
@@ -10,7 +10,7 @@ const togglePopNotification = (id: number) => {
 const listener = (event: string) => {
   const notificationId = id.value++
   notifications.value.push({
-    message: event,
+    isSuccess: !!event,
     popped: false,
     id: notificationId,
   })
@@ -42,14 +42,14 @@ onUnmounted(() => unsubscribe())
       :class="{ 'translate-x-115': !notification.popped }"
     >
       <div class="flex items-center">
-        <div :class="notification.message === 'OK' ? 'i-fa-check-circle color-green' : 'i-fa-exclamation-triangle color-red'" />
+        <div :class="notification.isSuccess ? 'i-fa-check-circle color-green' : 'i-fa-exclamation-triangle color-red'" />
         <div class="ml-2 mr-6">
           <span class="font-semibold text-dark-500">
-            {{ notification.message === 'OK' ? 'Message envoyé!' : 'Erreur!' }}
+            {{ notification.isSuccess ? 'Message envoyé!' : 'Erreur!' }}
           </span>
           <span class="block text-gray-500 max-w-350px">
             {{
-              notification.message === 'OK'
+              notification.isSuccess
                 ? 'JB a bien reçu votre message, il y répondra au plus vite.'
                 : 'Une erreur est survenur lors de l\'envoi du message. Veuillez réessayer plus tard.'
             }}
