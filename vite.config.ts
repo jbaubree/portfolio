@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import Sitemap from 'vite-plugin-sitemap'
 
 export default defineConfig({
   resolve: {
@@ -35,5 +36,8 @@ export default defineConfig({
       dts: true,
     }),
     Unocss(),
+    Sitemap({
+      hostname: 'https://jbaubree.fr/',
+    }),
   ],
 })
