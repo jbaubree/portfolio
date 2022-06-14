@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Box, Cone, Icosahedron, Tetrahedron, TorusKnot } from 'troisjs'
-import digitsole from '~/assets/images/digitsole.svg'
-import portfolio from '~/assets/images/portfolio.svg'
+import digitsole from '~/assets/images/digitsole.webp'
+import portfolio from '~/assets/images/portfolio.webp'
 import profile from '~/assets/images/profile.webp'
 import vite from '~/assets/images/vite.svg'
 
