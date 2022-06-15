@@ -8,7 +8,7 @@ const props = defineProps<{
 
 <template>
   <div class="bg-secondary p-10 rounded-10 flex flex-col gap-8 max-w-18rem">
-    <span class="text-2rem leading-11 font-bold">
+    <span class="text-1.75rem leading-none font-bold">
       {{ props.title }}
     </span>
     <Text>{{ props.text }}</Text>
