@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { locale as localStorageLocale } from '~/modules/i18n'
 const { locale } = useI18n()
 
 const toggleLocale = () => {
-  localStorageLocale.value = localStorageLocale.value === 'en' ? 'fr' : 'en'
-  locale.value = localStorageLocale.value
+  currentLocale.value = currentLocale.value === 'en' ? 'fr' : 'en'
+  locale.value = currentLocale.value
 }
 </script>
 

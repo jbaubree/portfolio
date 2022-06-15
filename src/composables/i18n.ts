@@ -11,11 +11,11 @@ const messages = Object.fromEntries(
 
 const preferedLocale = usePreferredLanguages().value[0].split('-')[0] === 'fr' ? 'fr' : 'en'
 
-export const locale = useLocalStorage('locale', preferedLocale)
+export const currentLocale = useLocalStorage('locale', preferedLocale)
 
 export const i18n = createI18n({
   legacy: false,
-  locale: locale.value,
+  locale: currentLocale.value,
   messages,
   globalInjection: true,
 })
