@@ -25,14 +25,13 @@ const links = [
       :key="link.name"
       :href="link.href"
       target="_blank"
+      :aria-label="link.name"
       class="w-8 h-8"
       :class="{
         'i-fa-github': link.icon === 'github',
         'i-fa-linkedin': link.icon === 'linkedin',
         'i-fa-envelope': link.icon === 'envelope',
       }"
-    >
-      <span class="hidden">{{ link.name }}</span>
-    </a>
+    />
   </div>
 </template>
