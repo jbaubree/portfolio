@@ -26,11 +26,10 @@ const links = [
       :href="link.href"
       target="_blank"
       :aria-label="link.name"
-      class="w-8 h-8"
       :class="{
-        'i-fa-github': link.icon === 'github',
-        'i-fa-linkedin': link.icon === 'linkedin',
-        'i-fa-envelope': link.icon === 'envelope',
+        'i-fa-github w-8 h-8': link.icon === 'github',
+        'i-fa-linkedin w-8 h-8': link.icon === 'linkedin',
+        'i-fa-envelope h-9 w-9': link.icon === 'envelope',
       }"
     />
   </div>

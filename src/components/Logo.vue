@@ -42,7 +42,7 @@ const elipseImage = computed(() => {
     :class="{
       'hidden sm:flex min-w-15': props.size === 'sm',
       'hidden sm:flex min-w-28': props.size === 'md',
-      'hidden md:flex md:min-w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
+      'hidden md:flex md:min-w-80 w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
     }"
   >
     <img
@@ -67,7 +67,7 @@ const elipseImage = computed(() => {
         :position="{
           x: props.icon?.name === 'Cone' ? 2 : 1,
           y: props.icon?.name === 'Cone' ? 3 : 2,
-          z: props.icon?.name === 'TorusKnot' ? 6 : 2,
+          z: props.icon?.name === 'Torus' ? 4 : 2,
         }"
       />
       <Scene>

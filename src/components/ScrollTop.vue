@@ -23,7 +23,7 @@ const scrollToTop = () => {
         opacity="50"
         transition="opacity"
         hover="opacity-100"
-        rounded="1"
+        rounded="full"
         cursor="pointer"
         @click="scrollToTop()"
       >

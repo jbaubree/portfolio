@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Box, Cone, Icosahedron, Tetrahedron, TorusKnot } from 'troisjs'
+import { Box, Cone, Icosahedron, Tetrahedron, Torus } from 'troisjs'
 import digitsole from '~/assets/images/digitsole.webp'
 import portfolio from '~/assets/images/portfolio.webp'
 import profile from '~/assets/images/profile.webp'
@@ -12,7 +12,7 @@ const skills = [
     tags: ['Vue 3', 'Typescript', 'Vite', 'UnoCSS'],
   },
   {
-    title: 'UI/UX Desing',
+    title: 'UI/UX Design',
     text: 'Aussi passionné par le web design, j\'aime quand les applications sont ergonomiques, intuitives et pixel perfect.',
     tags: ['Adobe XD', 'Illustrator', 'Photoshop'],
   },
@@ -98,7 +98,7 @@ const stack = [
   <div class="flex justify-center px-10">
     <Container class="md:mb-60">
       <div class="relative">
-        <div class="absolute top-0 left--100">
+        <div class="absolute top-0 left--80">
           <Logo size="lg" :icon="Cone" />
         </div>
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
@@ -175,7 +175,7 @@ const stack = [
 
   <FullPage class="relative flex flex-col items-start gap-8">
     <Container class="flex items-center sm:items-start flex-col gap-8">
-      <div class="absolute top--40 left--60">
+      <div class="absolute top--40 right-10 hidden lg:block">
         <Logo size="lg" :icon="Icosahedron" />
       </div>
       <Logo />
@@ -206,7 +206,7 @@ const stack = [
         </a>
       </div>
       <div class="absolute right--30 bottom--80">
-        <Logo size="lg" :icon="TorusKnot" />
+        <Logo size="lg" :icon="Torus" />
       </div>
     </Container>
   </FullPage>
@@ -219,9 +219,9 @@ const stack = [
           Contact
         </Title>
         <Text class="text-gray-700">
-          Téléphone: +33 7 60 26 94 99
+          Téléphone: <a class="font-semibold" href="tel:+33760269499">+33 7 60 26 94 99</a>
           <br>
-          Email: jb.aubree@protonmail.com
+          Email: <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
         </Text>
       </div>
       <div class="z-10 bg-white rounded-12 p-12 text-gray-700 shadow-2xl shadow-primary/30">
