@@ -96,7 +96,7 @@ const stack = [
   </FullPage>
 
   <div class="flex justify-center px-10">
-    <Container class="md:mb-60">
+    <Container :class="{ 'md:mb-60': isTallScreen.value }">
       <div class="relative">
         <div class="absolute top-0 left--80">
           <Logo size="lg" :icon="Cone" />
@@ -161,7 +161,7 @@ const stack = [
         Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler.
         Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
       </Text>
-      <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start">
+      <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
         <ProjectCard
           v-for="project, index in projects"
           :key="index"
