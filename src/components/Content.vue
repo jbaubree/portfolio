@@ -129,7 +129,7 @@ const stack = [
   <FullPage>
     <Container>
       <div class="flex items-center justify-center lg:justify-between gap-8">
-        <div class="flex flex-col items-center sm:items-start gap-8">
+        <div class="flex flex-col items-center md:items-start gap-8">
           <Logo />
           <Title>Compétences</Title>
           <Text>
@@ -152,7 +152,7 @@ const stack = [
   </FullPage>
 
   <FullPage class="bg-light-200">
-    <Container class="flex items-start flex-col gap-8">
+    <Container class="flex items-center md:items-start flex-col gap-8">
       <Logo variant="blue" />
       <Title class="text-primary">
         Projets
@@ -174,7 +174,7 @@ const stack = [
   </FullPage>
 
   <FullPage class="relative flex flex-col items-start gap-8">
-    <Container class="flex items-center sm:items-start flex-col gap-8">
+    <Container class="flex items-center md:items-start flex-col gap-8">
       <div class="absolute top--40 right-10 hidden lg:block">
         <Logo size="lg" :icon="Icosahedron" />
       </div>
@@ -205,15 +205,15 @@ const stack = [
           />
         </a>
       </div>
-      <div class="absolute left--30 bottom--80">
+      <div class="absolute left--30 bottom--40">
         <Logo size="lg" :icon="Torus" />
       </div>
     </Container>
   </FullPage>
 
   <FullPage class="bg-light-200">
-    <Container class="flex flex-col items-center sm:items-start md:items-center md:flex-row justify-between items-center w-full gap-8">
-      <div class="flex flex-col items-center sm:items-start gap-8">
+    <Container class="flex flex-col items-center md:items-start md:flex-row justify-between items-center w-full gap-8">
+      <div class="flex flex-col items-center md:items-start gap-8">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact
@@ -224,7 +224,7 @@ const stack = [
           Email: <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
         </Text>
       </div>
-      <div class="z-10 bg-white rounded-12 p-12 text-gray-700 shadow-2xl shadow-primary/30">
+      <div class="bg-white rounded-12 p-12 text-gray-700 w-full md:w-auto shadow-2xl shadow-primary/30">
         <ContactForm />
       </div>
     </Container>
