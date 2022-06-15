@@ -1,14 +1,17 @@
 <script setup lang="ts">
 const links = [
   {
+    name: 'Github',
     href: 'https://github.com/jbaubree',
     icon: 'github',
   },
   {
+    name: 'Linkedin',
     href: 'https://www.linkedin.com/in/jb-aubree/',
     icon: 'linkedin',
   },
   {
+    name: 'Email',
     href: 'mailto:jb.aubree@protonmail.com',
     icon: 'envelope',
   },
@@ -19,7 +22,7 @@ const links = [
   <div class="flex gap-4">
     <a
       v-for="link in links"
-      :key="link.icon"
+      :key="link.name"
       :href="link.href"
       target="_blank"
       class="w-8 h-8"
@@ -28,6 +31,8 @@ const links = [
         'i-fa-linkedin': link.icon === 'linkedin',
         'i-fa-envelope': link.icon === 'envelope',
       }"
-    />
+    >
+      <span class="hidden">{{ link.name }}</span>
+    </a>
   </div>
 </template>
