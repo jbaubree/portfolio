@@ -9,7 +9,7 @@ const messages = Object.fromEntries(
     }),
 )
 
-const preferedLocale = navigator.language.split('-')[0] === 'fr' ? 'fr' : 'en'
+const preferedLocale = usePreferredLanguages().value[0].split('-')[0] === 'fr' ? 'fr' : 'en'
 
 export const locale = useLocalStorage('locale', preferedLocale)
 

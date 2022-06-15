@@ -21,6 +21,7 @@ export default defineConfig({
           '@vueuse/core': [
             'useEventBus',
             'useLocalStorage',
+            'usePreferredLanguages',
           ],
         },
         'vue',
