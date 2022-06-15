@@ -47,7 +47,7 @@ onUnmounted(() => unsubscribe())
           <span class="font-semibold text-dark-500">
             {{ notification.isSuccess ? 'Message envoyé!' : 'Erreur!' }}
           </span>
-          <span class="block text-gray-500 max-w-350px">
+          <span class="block text-gray-500 max-w-260px">
             {{
               notification.isSuccess
                 ? 'JB a bien reçu votre message, il y répondra au plus vite.'

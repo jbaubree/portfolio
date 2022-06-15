@@ -16,7 +16,7 @@ const scrollToTop = () => {
   <Transition>
     <div v-if="scroll > 100">
       <div
-        class="fixed bottom-1.5rem right-1.5rem flex items-center justify-center"
+        class="z-100 fixed bottom-1.5rem right-1.5rem flex items-center justify-center"
         bg="black"
         w="2.5rem"
         h="2.5rem"

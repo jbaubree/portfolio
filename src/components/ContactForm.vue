@@ -71,7 +71,7 @@ const sendEmail = () => {
       <div
         v-if="isLoading"
         style="border-top-color:transparent"
-        class="w-10 h-10 border-4 border-white border-solid rounded-full animate-spin"
+        class="min-w-10 min-h-10 border-4 border-white border-solid rounded-full animate-spin"
       />
       <span v-else>Envoyer</span>
     </button>
