@@ -210,7 +210,7 @@ const stack = [
 
   <FullPage class="relative bg-light-200">
     <Container class="flex flex-col items-center md:items-start md:flex-row justify-between items-center w-full gap-8">
-      <div class="flex flex-col items-center md:items-start gap-8">
+      <div class="flex flex-col items-center md:items-start gap-8 z-1">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact
