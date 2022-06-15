@@ -1,0 +1,50 @@
+actions:
+  send: Envoyer
+contact:
+  contact: Contact
+  email: Email
+  phone: Téléphone
+form:
+  message: Message
+  your-email: Ton email
+  your-name: Ton nom
+header:
+  subtitle: Développement & intégration de web applications
+  title: Travail avec passion
+images:
+  profile-picture: Photo de profil
+nav:
+  contact: Contact
+  home: Accueil
+  projects: Projets
+  skills: Compétences
+  stack: Stack
+notifications:
+  error: Erreur !
+  messages:
+    error: Une erreur est survenur lors de l'envoi du message. Veuillez réessayer plus tard.
+    success: JB a bien reçu votre message, il y répondra au plus vite.
+  message-sent: Message envoyé !
+profile:
+  subtitle: Bonjour, je m'appelle Jean-Baptiste AUBRÉE
+  text: 'Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br> Mon langage de prédilection : '
+  title: Développeur front-end
+projects:
+  project: Projet | Projets
+  text: Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler. Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
+  texts:
+    digitsole: Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    portfolio: Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    vite: Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+skills:
+  skill: Compétence | Compétences
+  text: Je développe au quotidien des applications et fonctionnalités performantes, rapides, intuitives et ergonomiques en respectant au maximum les bonnes pratiques de développement. Bien que je sois autonome sur du back-end, de l'infrastructure ou du design, mon principal domaine d'expertise reste le front-end.
+  texts:
+    web-app: Je développe des web apps en VueJS avec une stack des plus récentes.
+    ui/ux-design: Aussi passionné par le web design, j\'aime quand les applications sont ergonomiques, intuitives et pixel perfect.
+  titles:
+    web-app: Web app
+    ui/ux-design: UI/UX Design
+stack:
+  stack: Stack
+  text: Ma stack de prédiclection avec mes librairies préférées...

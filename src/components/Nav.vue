@@ -1,27 +1,29 @@
 <script setup lang="ts">
-const navItems = [
+const { t } = useI18n()
+
+const navItems = computed(() => [
   {
-    name: 'Accueil',
+    name: t('nav.home'),
     isActive: true,
     isDisabled: true,
   },
   {
-    name: 'Compétences',
+    name: t('nav.skills'),
     isActive: false,
   },
   {
-    name: 'Projets',
+    name: t('nav.projects'),
     isActive: false,
   },
   {
-    name: 'Stack',
+    name: t('nav.stack'),
     isActive: false,
   },
   {
-    name: 'Contact',
+    name: t('nav.contact'),
     isActive: false,
   },
-]
+])
 
 const pages = computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
 

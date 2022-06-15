@@ -45,13 +45,13 @@ onUnmounted(() => unsubscribe())
         <div :class="notification.isSuccess ? 'i-fa-check-circle color-green' : 'i-fa-exclamation-triangle color-red'" />
         <div class="ml-2 mr-6">
           <span class="font-semibold text-dark-500">
-            {{ notification.isSuccess ? 'Message envoyé!' : 'Erreur!' }}
+            {{ notification.isSuccess ? $t('notifications.message-sent') : $t('notifications.error') }}
           </span>
           <span class="block text-gray-500 max-w-260px">
             {{
               notification.isSuccess
-                ? 'JB a bien reçu votre message, il y répondra au plus vite.'
-                : 'Une erreur est survenur lors de l\'envoi du message. Veuillez réessayer plus tard.'
+                ? $t('notifications.messages.success')
+                : $t('notifications.messages.error')
             }}
           </span>
         </div>

@@ -5,36 +5,38 @@ import portfolio from '~/assets/images/portfolio.webp'
 import profile from '~/assets/images/profile.webp'
 import vite from '~/assets/images/vite.svg'
 
-const skills = [
+const { t } = useI18n()
+
+const skills = computed(() => [
   {
-    title: 'Web app',
-    text: 'Je développe des web apps en VueJS avec une stack des plus récentes.',
+    title: t('skills.titles.web-app'),
+    text: t('skills.texts.web-app'),
     tags: ['Vue 3', 'Typescript', 'Vite', 'UnoCSS'],
   },
   {
-    title: 'UI/UX Design',
-    text: 'Aussi passionné par le web design, j\'aime quand les applications sont ergonomiques, intuitives et pixel perfect.',
+    title: t('skills.titles.ui/ux-design'),
+    text: t('skills.texts.ui/ux-design'),
     tags: ['Adobe XD', 'Illustrator', 'Photoshop'],
   },
-]
+])
 
-const projects = [
+const projects = computed(() => [
   {
     image: portfolio,
-    text: 'Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    text: t('projects.texts.portfolio'),
     link: 'https://github.com/jbaubree/portfolio/',
   },
   {
     image: digitsole,
-    text: 'Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    text: t('projects.texts.digitsole'),
     link: 'https://app.digitsolepro.com/',
   },
   {
     image: vite,
-    text: 'Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    text: t('projects.texts.vite'),
     link: 'https://github.com/jbaubree?tab=repositories&q=vite',
   },
-]
+])
 
 const stack = [
   {
@@ -86,8 +88,8 @@ const stack = [
     <Container>
       <div class="flex items-center justify-between gap-8">
         <div class="flex flex-col gap-8 sm:gap-10">
-          <Text>Travail avec passion</Text>
-          <Title>Développement & intégration de web applications</Title>
+          <Text>{{ $t('header.title') }}</Text>
+          <Title>{{ $t('header.subtitle') }}</Title>
           <Socials />
         </div>
         <Logo size="lg" :icon="Box" />
@@ -104,7 +106,7 @@ const stack = [
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
           <img
             :src="profile"
-            alt="profile-picture"
+            :alt="$t('images.profile-picture')"
             fetchpriority="high"
             width="450"
             height="600"
@@ -112,13 +114,12 @@ const stack = [
             style="filter: sepia(35%) hue-rotate(195deg) saturate(500%);"
           >
           <div class="flex flex-col gap-8">
-            <Text>Développeur front-end</Text>
+            <Text>{{ $t('profile.title') }}</Text>
             <Title>
-              Bonjour, je m'appelle Jean-Baptiste AUBRÉE
+              {{ $t('profile.subtitle') }}
             </Title>
             <Text>
-              Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br>
-              Mon langage de prédilection: <span class="font-semibold">VueJS</span>.
+              {{ $t('profile.text') }} <span class="font-semibold">VueJS</span>.
             </Text>
           </div>
         </div>
@@ -131,10 +132,9 @@ const stack = [
       <div class="flex items-center justify-center lg:justify-between gap-8">
         <div class="flex flex-col items-center md:items-start gap-8">
           <Logo />
-          <Title>Compétences</Title>
+          <Title>{{ $t('skills.skill', 2) }}</Title>
           <Text>
-            Je développe au quotidien des applications et fonctionnalités performantes, rapides, intuitives et ergonomiques en respectant au maximum les bonnes pratiques de développement.
-            Bien que je sois autonome sur du back-end, de l'infrastructure ou du design, mon principal domaine d'expertise reste le front-end.
+            {{ $t('skills.text') }}
           </Text>
           <div class="flex flex-col sm:flex-row gap-8 items-start">
             <SkillCard
@@ -155,11 +155,10 @@ const stack = [
     <Container class="flex items-center md:items-start flex-col gap-8">
       <Logo variant="primary" />
       <Title class="text-primary">
-        Projets
+        {{ $t('projects.project', 2) }}
       </Title>
       <Text class="text-gray-700">
-        Voici différents projets open source ou non privés sur lesquels j'ai eu l'occasion de travailler.
-        Certains de ces projets ont été entièrement développés par mes soins, d'autres en partie.
+        {{ $t('projects.text') }}
       </Text>
       <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
         <ProjectCard
@@ -180,10 +179,10 @@ const stack = [
       </div>
       <Logo />
       <Title>
-        Stack
+        {{ $t('stack.stack') }}
       </Title>
       <Text>
-        Ma stack de prédiclection avec mes librairies préférées...
+        {{ $t('stack.text') }}
       </Text>
       <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-x-10 gap-y-1px">
         <a
@@ -213,12 +212,12 @@ const stack = [
       <div class="flex flex-col items-center md:items-start gap-8 z-1">
         <Logo variant="primary" />
         <Title class="text-primary">
-          Contact
+          {{ $t('contact.contact') }}
         </Title>
         <Text class="text-gray-700">
-          Téléphone: <a class="font-semibold" href="tel:+33760269499">+33 7 60 26 94 99</a>
+          {{ $t('contact.phone') }} : <a class="font-semibold" href="tel:+33760269499">+33 7 60 26 94 99</a>
           <br>
-          Email: <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
+          {{ $t('contact.email') }} : <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
         </Text>
       </div>
       <div class="bg-white rounded-12 p-12 text-gray-700 w-full md:w-auto shadow-2xl shadow-primary/30">

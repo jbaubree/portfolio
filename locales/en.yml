@@ -1,0 +1,50 @@
+actions:
+  send: Send
+contact:
+  contact: Contact
+  email: Email
+  phone: Phone
+form:
+  message: Message
+  your-email: Your email
+  your-name: Your name
+header:
+  subtitle: Web applications development & integration
+  title: Work with passion
+images:
+  profile-picture: Profile picture
+nav:
+  contact: Contact
+  home: Home
+  projects: Projects
+  skills: Skills
+  stack: Stack
+notifications:
+  error: Error !
+  messages:
+    error: An error occurred while sending the message. Please try again later.
+    success: JB has received your message, he will respond as soon as possible.
+  message-sent: Message sent !
+profile:
+  subtitle: Hi, my name is Jean-Baptiste AUBRÉE
+  text: 'Passionate about development since my youngest age, I have been working as a front-end developer for 5 years. <br> My preferred language:'
+  title: Front end developer
+projects:
+  project: Project | Projects
+  text: Here are different open source or non-private projects I had the opportunity to work on. Some of these projects have been entirely developed by me, others in part.
+  texts:
+    digitsole: Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    portfolio: Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    vite: Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+skills:
+  skill: Skill | Skills
+  text: I develop high-performance, fast, intuitive and ergonomic applications and functionalities on a daily basis while respecting good development practices as much as possible. Although I am autonomous on the back-end, the infrastructure or the design, my main area of ​​expertise remains the front-end.
+  texts:
+    web-app: I develop web apps in VueJS with the most recent stack.
+    ui/ux-design: Also passionate about web design, I like when applications are ergonomic, intuitive and pixel perfect.
+  titles:
+    web-app: Web app
+    ui/ux-design: UI/UX Design
+stack:
+  stack: Stack
+  text: My favorite stack and libraries...

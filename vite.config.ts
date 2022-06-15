@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Sitemap from 'vite-plugin-sitemap'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
 export default defineConfig({
   resolve: {
@@ -19,9 +20,11 @@ export default defineConfig({
         {
           '@vueuse/core': [
             'useEventBus',
+            'useLocalStorage',
           ],
         },
         'vue',
+        'vue-i18n',
       ],
       dirs: [
         'src/utils',
@@ -36,6 +39,11 @@ export default defineConfig({
     Unocss(),
     Sitemap({
       hostname: 'https://jbaubree.fr/',
+    }),
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [resolve(__dirname, 'locales/**')],
     }),
   ],
 })
