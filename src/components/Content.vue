@@ -212,8 +212,8 @@ const stack = [
   </FullPage>
 
   <FullPage class="bg-light-200">
-    <Container class="flex flex-col md:flex-row justify-between items-center w-full gap-8">
-      <div class="flex flex-col items-center md:items-start gap-8">
+    <Container class="flex flex-col items-center sm:items-start md:items-center md:flex-row justify-between items-center w-full gap-8">
+      <div class="flex flex-col items-center sm:items-start gap-8">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact
