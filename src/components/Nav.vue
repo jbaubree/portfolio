@@ -3,6 +3,7 @@ const navItems = [
   {
     name: 'Accueil',
     isActive: true,
+    isDisabled: true,
   },
   {
     name: 'Compétences',
@@ -38,6 +39,7 @@ const scrollToSection = (index: number) => {
       :key="navItem.name"
       href="#"
       class="transition-shadow shadow-weight md:text-1rem text-sm"
+      :class="{ hidden: navItem.isDisabled }"
       @click.stop.prevent="scrollToSection(index)"
     >
       {{ navItem.name }}
