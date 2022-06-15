@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  build-lint-typecheck:
+  checks:
     runs-on: ${{ matrix.os }}
 
     timeout-minutes: 10
@@ -44,7 +44,7 @@ jobs:
         run: pnpm run typecheck
 
   deploy:
-    needs: [build-lint-typecheck]
+    needs: [checks]
 
     runs-on: ubuntu-latest
 
