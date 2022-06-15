@@ -8,7 +8,7 @@ import elipseBlue from '~/assets/images/elipse-blue.svg'
 const props = withDefaults(defineProps<{
   icon?: Component
   size?: 'sm' | 'md' | 'lg'
-  variant?: 'blue' | 'white'
+  variant?: 'primary' | 'white'
 }>(), {
   size: 'md',
   variant: 'white',
@@ -30,7 +30,7 @@ const elipseImage = computed(() => {
   switch (props.variant) {
     case 'white':
       return elipse
-    case 'blue':
+    case 'primary':
       return elipseBlue
   }
 })
