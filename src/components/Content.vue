@@ -205,7 +205,7 @@ const stack = [
           />
         </a>
       </div>
-      <div class="absolute right--30 bottom--80">
+      <div class="absolute left--30 bottom--80">
         <Logo size="lg" :icon="Torus" />
       </div>
     </Container>
