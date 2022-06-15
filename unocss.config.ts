@@ -8,6 +8,9 @@ import {
 
 export default defineConfig({
   theme: {
+    duration: {
+      DEFAULT: '.3s',
+    },
     colors: {
       primary: '#1c2aaf',
       secondary: '#3747e4',
