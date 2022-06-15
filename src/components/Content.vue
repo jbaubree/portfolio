@@ -82,10 +82,10 @@ const stack = [
 
 <template>
   <Header />
-  <FullPage>
+  <FullPage class="py-20">
     <Container>
-      <div class="flex items-center justify-between gap-5">
-        <div class="flex flex-col gap-10">
+      <div class="flex items-center justify-between gap-8">
+        <div class="flex flex-col gap-8 sm:gap-10">
           <Text>Travail avec passion</Text>
           <Title>Développement & intégration de web applications</Title>
           <Socials />
@@ -96,7 +96,7 @@ const stack = [
   </FullPage>
 
   <div class="flex justify-center px-10">
-    <Container class="mb-60">
+    <Container class="md:mb-60">
       <div class="relative">
         <div class="absolute top-0 left--100">
           <Logo size="lg" :icon="Cone" />
@@ -111,7 +111,7 @@ const stack = [
             class="absolute bottom--30 left--20 hidden md-block"
             style="filter: sepia(35%) hue-rotate(195deg) saturate(500%);"
           >
-          <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-8">
             <Text>Développeur front-end</Text>
             <Title>
               Bonjour, je m'appelle Jean-Baptiste AUBRÉE
@@ -128,15 +128,15 @@ const stack = [
 
   <FullPage>
     <Container>
-      <div class="flex items-center justify-center lg:justify-between gap-5">
-        <div class="flex flex-col items-start gap-5">
+      <div class="flex items-center justify-center lg:justify-between gap-8">
+        <div class="flex flex-col items-center sm:items-start gap-8">
           <Logo />
           <Title>Compétences</Title>
           <Text>
             Je développe au quotidien des applications et fonctionnalités performantes, rapides, intuitives et ergonomiques en respectant au maximum les bonnes pratiques de développement.
             Bien que je sois autonome sur du back-end, de l'infrastructure ou du design, mon principal domaine d'expertise reste le front-end.
           </Text>
-          <div class="flex gap-5 items-start">
+          <div class="flex flex-col sm:flex-row gap-8 items-start">
             <SkillCard
               v-for="skill, index in skills"
               :key="index"
@@ -152,7 +152,7 @@ const stack = [
   </FullPage>
 
   <FullPage class="bg-light-200">
-    <Container class="flex items-start flex-col gap-5">
+    <Container class="flex items-start flex-col gap-8">
       <Logo variant="blue" />
       <Title class="text-primary">
         Projets
@@ -173,8 +173,8 @@ const stack = [
     </Container>
   </FullPage>
 
-  <FullPage class="relative flex flex-col items-start gap-5">
-    <Container class="flex items-start flex-col gap-5">
+  <FullPage class="relative flex flex-col items-start gap-8">
+    <Container class="flex items-center sm:items-start flex-col gap-8">
       <div class="absolute top--40 left--60">
         <Logo size="lg" :icon="Icosahedron" />
       </div>
@@ -213,7 +213,7 @@ const stack = [
 
   <FullPage class="bg-light-200">
     <Container class="flex flex-col md:flex-row justify-between items-center w-full gap-8">
-      <div class="flex flex-col items-center md:items-start gap-5">
+      <div class="flex flex-col items-center md:items-start gap-8">
         <Logo variant="blue" />
         <Title class="text-primary">
           Contact

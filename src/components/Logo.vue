@@ -37,16 +37,18 @@ const elipseImage = computed(() => {
 </script>
 
 <template>
-  <div class="relative flex items-center justify-center">
+  <div
+    class="relative items-center justify-center"
+    :class="{
+      'hidden sm:flex min-w-15': props.size === 'sm',
+      'hidden sm:flex min-w-28': props.size === 'md',
+      'hidden md:flex md:min-w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
+    }"
+  >
     <img
       :src="elipseImage"
       alt="logo"
       fetchpriority="high"
-      :class="{
-        'hidden sm:flex min-w-15': props.size === 'sm',
-        'hidden sm:flex min-w-28': props.size === 'md',
-        'hidden md:flex md:min-w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
-      }"
       :width="elipseSize"
       :height="elipseSize"
     >
