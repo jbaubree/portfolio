@@ -26,7 +26,7 @@ const isLightMouse = $computed(() => {
 
 <template>
   <Transition>
-    <div v-if="showScrollIcon && isMdAndLarger" class="fixed bottom-10 left-50% translate-x--50%">
+    <div v-if="showScrollIcon && isMdAndLarger" class="z-100 fixed bottom-10 left-50% translate-x--50%">
       <span
         class="block relative h-3.25rem w-2rem rounded-1rem border border-.22rem"
         :class="isLightMouse ? 'border-white' : 'border-secondary'"
