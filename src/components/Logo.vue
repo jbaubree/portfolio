@@ -5,18 +5,15 @@ import type { Component } from 'vue'
 import elipse from '~/assets/images/elipse.svg'
 import elipseBlue from '~/assets/images/elipse-blue.svg'
 
-const props = withDefaults(defineProps<{
+const { icon, size = 'md', variant = 'white' } = defineProps<{
   icon?: Component
   size?: 'sm' | 'md' | 'lg'
   variant?: 'primary' | 'white'
-}>(), {
-  size: 'md',
-  variant: 'white',
-})
+}>()
 
 const elipseSize = $computed(() => {
   const unoCssRatio = 4
-  switch (props.size) {
+  switch (size) {
     case 'sm':
       return 15 * unoCssRatio
     case 'md':
@@ -27,7 +24,7 @@ const elipseSize = $computed(() => {
 })
 
 const elipseImage = $computed(() => {
-  switch (props.variant) {
+  switch (variant) {
     case 'white':
       return elipse
     case 'primary':
@@ -40,9 +37,9 @@ const elipseImage = $computed(() => {
   <div
     class="relative items-center justify-center"
     :class="{
-      'hidden sm:flex min-w-15': props.size === 'sm',
-      'hidden sm:flex min-w-28': props.size === 'md',
-      'hidden md:flex md:min-w-80 w-80 lg:min-w-100 xl:min-w-110': props.size === 'lg',
+      'hidden sm:flex min-w-15': size === 'sm',
+      'hidden sm:flex min-w-28': size === 'md',
+      'hidden md:flex md:min-w-80 w-80 lg:min-w-100 xl:min-w-110': size === 'lg',
     }"
   >
     <img
@@ -53,7 +50,7 @@ const elipseImage = $computed(() => {
       :height="elipseSize"
     >
     <Renderer
-      v-if="props.icon"
+      v-if="icon"
       ref="renderer"
       class="absolute"
       width="200%"
@@ -65,9 +62,9 @@ const elipseImage = $computed(() => {
     >
       <Camera
         :position="{
-          x: props.icon?.name === 'Cone' ? 2 : 1,
-          y: props.icon?.name === 'Cone' ? 3 : 2,
-          z: props.icon?.name === 'Torus' ? 4 : 2,
+          x: icon?.name === 'Cone' ? 2 : 1,
+          y: icon?.name === 'Cone' ? 3 : 2,
+          z: icon?.name === 'Torus' ? 4 : 2,
         }"
       />
       <Scene>

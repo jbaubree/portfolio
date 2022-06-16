@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+const { image, text, link } = defineProps<{
   image: string
   text: string
   link: string
@@ -10,12 +10,12 @@ const props = defineProps<{
   <div class="max-w-250px lg:max-w-300px xl:max-w-350px rounded-8 overflow-hidden group relative">
     <img
       class="w-full h-full object-cover"
-      :src="props.image"
-      :alt="imageNameFromPath(props.image)"
+      :src="image"
+      :alt="imageNameFromPath(image)"
       fetchpriority="high"
     >
     <a
-      :href="props.link"
+      :href="link"
       target="_blank"
       class="flex items-center justify-center"
       cursor="pointer"
@@ -32,7 +32,7 @@ const props = defineProps<{
       p="8"
     >
       <Text class="text-center">
-        {{ props.text }}
+        {{ text }}
       </Text>
     </a>
   </div>
