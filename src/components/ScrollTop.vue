@@ -6,7 +6,8 @@ window.addEventListener('scroll', () => {
 })
 
 const scrollToTop = () => {
-  (document.querySelector('#app') as HTMLElement).scrollIntoView({
+  window.scrollTo({
+    top: 0,
     behavior: 'smooth',
   })
 }
