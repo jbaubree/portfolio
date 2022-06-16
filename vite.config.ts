@@ -17,13 +17,7 @@ export default defineConfig({
     Vue({ reactivityTransform: true }),
     AutoImport({
       imports: [
-        {
-          '@vueuse/core': [
-            'useEventBus',
-            'useLocalStorage',
-            'usePreferredLanguages',
-          ],
-        },
+        '@vueuse/core',
         'vue',
         'vue-i18n',
         'vue/macros',

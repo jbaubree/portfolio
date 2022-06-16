@@ -18,7 +18,7 @@ nav:
   home: Home
   presentation: Presentation
   projects: Projects
-  skills: Skills
+  services: Services
   stack: Stack
 notifications:
   error: Error !
@@ -37,8 +37,8 @@ projects:
     digitsole: Digitsole Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     portfolio: Portfolio Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     vite: Vite Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-skills:
-  skill: Skill | Skills
+services:
+  service: Service | Services
   text: I develop high-performance, fast, intuitive and ergonomic applications and functionalities on a daily basis while respecting good development practices as much as possible. Although I am autonomous on the back-end, the infrastructure or the design, my main area of expertise remains the front-end.
   texts:
     web-app: I develop web apps in VueJS with the most recent stack.

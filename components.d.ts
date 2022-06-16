@@ -16,7 +16,7 @@ declare module '@vue/runtime-core' {
     Notification: typeof import('./src/components/Notification.vue')['default']
     ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
     ScrollTop: typeof import('./src/components/ScrollTop.vue')['default']
-    SkillCard: typeof import('./src/components/SkillCard.vue')['default']
+    ServiceCard: typeof import('./src/components/ServiceCard.vue')['default']
     Socials: typeof import('./src/components/Socials.vue')['default']
     Text: typeof import('./src/components/Text.vue')['default']
     Title: typeof import('./src/components/Title.vue')['default']

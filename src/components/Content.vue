@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Box, Cone, Icosahedron, Tetrahedron, Torus } from 'troisjs'
+import ServiceCard from './ServiceCard.vue'
 import digitsole from '~/assets/images/digitsole.webp'
 import portfolio from '~/assets/images/portfolio.webp'
 import profile from '~/assets/images/profile.webp'
@@ -8,15 +9,15 @@ import vite from '~/assets/images/vite.svg'
 const { t } = useI18n()
 const { isTallScreen } = useScreen()
 
-const skills = $computed(() => [
+const services = $computed(() => [
   {
-    title: t('skills.titles.web-app'),
-    text: t('skills.texts.web-app'),
+    title: t('services.titles.web-app'),
+    text: t('services.texts.web-app'),
     tags: ['Vue 3', 'Typescript', 'Vite', 'UnoCSS'],
   },
   {
-    title: t('skills.titles.ui/ux-design'),
-    text: t('skills.texts.ui/ux-design'),
+    title: t('services.titles.ui/ux-design'),
+    text: t('services.texts.ui/ux-design'),
     tags: ['Adobe XD', 'Illustrator', 'Photoshop'],
   },
 ])
@@ -136,17 +137,17 @@ const stack = [
       <div class="flex items-center justify-center lg:justify-between gap-8">
         <div class="flex flex-col items-center md:items-start gap-8">
           <Logo />
-          <Title>{{ $t('skills.skill', 2) }}</Title>
+          <Title>{{ $t('services.service', 2) }}</Title>
           <Text>
-            {{ $t('skills.text') }}
+            {{ $t('services.text') }}
           </Text>
           <div class="flex flex-col sm:flex-row gap-8 items-start">
-            <SkillCard
-              v-for="skill, index in skills"
+            <ServiceCard
+              v-for="service, index in services"
               :key="index"
-              :title="skill.title"
-              :text="skill.text"
-              :tags="skill.tags"
+              :title="service.title"
+              :text="service.text"
+              :tags="service.tags"
             />
           </div>
         </div>
