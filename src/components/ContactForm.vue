@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { useAxios } from '@vueuse/integrations/useAxios'
+import type { ExcludedRefType } from '~/types'
 
 const bus = useEventBus<string>('contact-form')
 
+let formData = $ref(new FormData())
 const form = $ref({
   service_id: import.meta.env.VITE_EMAIL_SERVICE_ID,
   template_id: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
@@ -11,10 +13,8 @@ const form = $ref({
   email: '',
   message: '',
 })
-const unwrappedForm = $$(form)
-let formData = $ref(new FormData())
 
-type Form = typeof unwrappedForm.value
+type Form = ExcludedRefType<typeof form>
 
 const { data, isLoading, execute } = useAxios('https://api.emailjs.com/api/v1.0/email/send-form', {
   method: 'POST',
