@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     Nav: typeof import('./src/components/Nav.vue')['default']
     Notification: typeof import('./src/components/Notification.vue')['default']
     ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
+    ScrollMouse: typeof import('./src/components/ScrollMouse.vue')['default']
     ScrollTop: typeof import('./src/components/ScrollTop.vue')['default']
     ServiceCard: typeof import('./src/components/ServiceCard.vue')['default']
     Socials: typeof import('./src/components/Socials.vue')['default']

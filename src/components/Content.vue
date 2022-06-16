@@ -156,7 +156,7 @@ const stack = [
     </Container>
   </FullPage>
 
-  <FullPage class="bg-light-200">
+  <FullPage background="bg-light-200">
     <Container class="flex items-center md:items-start flex-col gap-8">
       <Logo variant="primary" />
       <Title class="text-primary">
@@ -212,7 +212,7 @@ const stack = [
     </Container>
   </FullPage>
 
-  <FullPage class="relative bg-light-200">
+  <FullPage background="bg-light-200" class="relative">
     <Container class="flex flex-col items-center md:items-start md:flex-row justify-between items-center w-full gap-8">
       <div class="flex flex-col items-center md:items-start gap-8 z-1">
         <Logo variant="primary" />

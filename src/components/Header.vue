@@ -3,7 +3,7 @@ const { isTallScreen } = useScreen()
 </script>
 
 <template>
-  <div class="px-10">
+  <div class="px-10 bg-primary">
     <div class="relative flex justify-center">
       <Container
         class="flex items-center justify-center sm:justify-between pt-11"
