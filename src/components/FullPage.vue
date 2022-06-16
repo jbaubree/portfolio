@@ -5,10 +5,15 @@ const { isMdAndLarger } = useTailwindBreakpoints()
 
 let showScrollIcon = $ref(false)
 
+let timer: ReturnType<typeof setTimeout> | undefined
+
 watch(isScrolling, (value) => {
-  if (value) { showScrollIcon = false }
+  if (value) {
+    clearTimeout(timer)
+    showScrollIcon = false
+  }
   else if (y.value < 100 || pages.value.find(page => page.offsetTop === y.value)) {
-    setTimeout(() => {
+    timer = setTimeout(() => {
       showScrollIcon = true
     }, 3000)
   }
