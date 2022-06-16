@@ -118,9 +118,7 @@ const stack = [
             <Title>
               {{ $t('profile.subtitle') }}
             </Title>
-            <Text>
-              {{ $t('profile.text') }} <span class="font-semibold">VueJS</span>.
-            </Text>
+            <Text v-html="$t('profile.text')" />
           </div>
         </div>
       </div>
@@ -215,9 +213,9 @@ const stack = [
           {{ $t('contact.contact') }}
         </Title>
         <Text class="text-gray-700">
-          {{ $t('contact.phone') }} : <a class="font-semibold" href="tel:+33760269499">+33 7 60 26 94 99</a>
+          {{ $t('contact.phone') }}: <a class="font-semibold" href="tel:+33760269499">+33 7 60 26 94 99</a>
           <br>
-          {{ $t('contact.email') }} : <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
+          {{ $t('contact.email') }}: <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
         </Text>
       </div>
       <div class="bg-white rounded-12 p-12 text-gray-700 w-full md:w-auto shadow-2xl shadow-primary/30">

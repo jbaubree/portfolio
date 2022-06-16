@@ -27,7 +27,7 @@ notifications:
   message-sent: Message sent !
 profile:
   subtitle: Hi, my name is Jean-Baptiste AUBRÉE
-  text: 'Passionate about development since my youngest age, I have been working as a front-end developer for 5 years. <br> My preferred language:'
+  text: 'Passionate about development since my youngest age, I have been working as a front-end developer for 5 years. <br> My preferred language: <span class="font-semibold">VueJS</span>.'
   title: Front end developer
 projects:
   project: Project | Projects

@@ -27,7 +27,7 @@ notifications:
   message-sent: Message envoyé !
 profile:
   subtitle: Bonjour, je m'appelle Jean-Baptiste AUBRÉE
-  text: 'Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br> Mon langage de prédilection : '
+  text: 'Passionné par le développement depuis mon plus jeune âge, je travaille en tant que développeur front-end depuis maintenance 5 ans. <br> Mon langage de prédilection : <span class="font-semibold">VueJS</span>.'
   title: Développeur front-end
 projects:
   project: Projet | Projets
