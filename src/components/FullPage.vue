@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { isTallScreen, pages } = useScreen()
 const { isScrolling, y } = useScroll(window)
+const { isMdAndLarger } = useTailwindBreakpoints()
 
 let showScrollIcon = $ref(false)
 
@@ -24,7 +25,7 @@ const isBlueMouse = computed(() => {
     :class="{ 'md:h-100vh md:py-0': isTallScreen }"
   >
     <slot />
-    <div v-if="showScrollIcon" class="fixed bottom-10 left-50% translate-x--50%">
+    <div v-if="showScrollIcon && isMdAndLarger" class="fixed bottom-10 left-50% translate-x--50%">
       <span
         class="block relative h-3.25rem w-2rem rounded-1rem border border-.22rem"
         :class="isBlueMouse ? 'border-secondary' : 'border-white'"
