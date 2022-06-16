@@ -7,7 +7,7 @@ import vite from '~/assets/images/vite.svg'
 
 const { t } = useI18n()
 
-const skills = computed(() => [
+const skills = $computed(() => [
   {
     title: t('skills.titles.web-app'),
     text: t('skills.texts.web-app'),
@@ -20,7 +20,7 @@ const skills = computed(() => [
   },
 ])
 
-const projects = computed(() => [
+const projects = $computed(() => [
   {
     image: portfolio,
     text: t('projects.texts.portfolio'),
@@ -98,7 +98,7 @@ const stack = [
   </FullPage>
 
   <div class="flex justify-center px-10">
-    <Container :class="{ 'md:mb-60': isTallScreen.value }">
+    <Container :class="{ 'md:mb-60': isTallScreen }">
       <div class="relative">
         <div class="absolute top-0 left--80">
           <Logo size="lg" :icon="Cone" />

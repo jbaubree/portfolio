@@ -26,6 +26,7 @@ export default defineConfig({
         },
         'vue',
         'vue-i18n',
+        'vue/macros',
       ],
       dirs: [
         'src/utils',

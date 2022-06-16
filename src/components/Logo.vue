@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<{
   variant: 'white',
 })
 
-const elipseSize = computed(() => {
+const elipseSize = $computed(() => {
   const unoCssRatio = 4
   switch (props.size) {
     case 'sm':
@@ -26,7 +26,7 @@ const elipseSize = computed(() => {
   }
 })
 
-const elipseImage = computed(() => {
+const elipseImage = $computed(() => {
   switch (props.variant) {
     case 'white':
       return elipse

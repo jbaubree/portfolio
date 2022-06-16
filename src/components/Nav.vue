@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const navItems = computed(() => [
+const navItems = $computed(() => [
   {
     name: t('nav.home'),
     isActive: true,
@@ -25,10 +25,10 @@ const navItems = computed(() => [
   },
 ])
 
-const pages = computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
+const pages = $computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
 
 const scrollToSection = (index: number) => {
-  pages.value[index].scrollIntoView({
+  pages[index].scrollIntoView({
     behavior: 'smooth',
   })
 }

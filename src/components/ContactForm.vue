@@ -3,7 +3,7 @@ import { useAxios } from '@vueuse/integrations/useAxios'
 
 const bus = useEventBus<string>('contact-form')
 
-const form = ref({
+const form = $ref({
   service_id: import.meta.env.VITE_EMAIL_SERVICE_ID,
   template_id: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
   user_id: import.meta.env.VITE_EMAIL_USER_ID,
@@ -11,30 +11,31 @@ const form = ref({
   email: '',
   message: '',
 })
-const formData = ref(new FormData())
+const unwrappedForm = $$(form)
+let formData = $ref(new FormData())
 
-type Form = typeof form.value
+type Form = typeof unwrappedForm.value
 
 const { data, isLoading, execute } = useAxios('https://api.emailjs.com/api/v1.0/email/send-form', {
   method: 'POST',
-  data: formData.value,
+  data: formData,
 }, { immediate: false })
 
 watch(isLoading, (value) => {
   if (!value) {
     bus.emit(data.value)
-    form.value.name = ''
-    form.value.email = ''
-    form.value.message = ''
+    form.name = ''
+    form.email = ''
+    form.message = ''
   }
 })
 
 const sendEmail = () => {
-  (Object.keys(form.value) as (keyof Form)[]).forEach((key: keyof Form) => {
-    formData.value.append(key, form.value[key])
+  (Object.keys(form) as (keyof Form)[]).forEach((key: keyof Form) => {
+    formData.append(key, form[key])
   })
   execute()
-  formData.value = new FormData()
+  formData = new FormData()
 }
 </script>
 

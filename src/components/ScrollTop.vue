@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const scroll = ref(0)
+let scroll = $ref(0)
 
 window.addEventListener('scroll', () => {
-  scroll.value = scrollY
+  scroll = scrollY
 })
 
 const scrollToTop = () => {
