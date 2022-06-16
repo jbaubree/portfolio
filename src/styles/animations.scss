@@ -1,0 +1,20 @@
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.animate-dot {
+  animation: dot 2s ease-out infinite;
+}
+
+@keyframes dot {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(.75em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}

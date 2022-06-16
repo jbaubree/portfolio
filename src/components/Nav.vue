@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { pages } = useScreen()
 
 const navItems = $computed(() => [
   {
@@ -35,10 +36,8 @@ const navItems = $computed(() => [
   },
 ])
 
-const pages = $computed(() => Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>))
-
 const scrollToSection = (index: number) => {
-  pages[index].scrollIntoView({
+  pages.value[index].scrollIntoView({
     behavior: 'smooth',
   })
 }

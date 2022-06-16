@@ -1,21 +1,3 @@
-html,
-body,
-#app {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.shadow-weight:hover {
-  text-shadow: 0 0.02rem white, 0 -0.02rem white, 0.015rem 0 white, -0.015rem 0 white;
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
+@import 'animations';
+@import 'body';
+@import 'shadows';
