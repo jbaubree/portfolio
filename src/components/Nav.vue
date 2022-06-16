@@ -8,6 +8,10 @@ const navItems = $computed(() => [
     isDisabled: true,
   },
   {
+    name: t('nav.presentation'),
+    isActive: true,
+  },
+  {
     name: t('nav.skills'),
     isActive: false,
   },

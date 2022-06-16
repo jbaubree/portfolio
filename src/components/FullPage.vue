@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { isTallScreen } = useScreen()
 </script>
 
 <template>

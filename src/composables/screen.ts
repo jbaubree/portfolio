@@ -1,2 +1,8 @@
-export const screenHeight = $computed(() => window.outerHeight)
-export const isTallScreen = $computed(() => screenHeight > 768)
+export function useScreen() {
+  const screenHeight = $computed(() => window.outerHeight)
+  const isTallScreen = $computed(() => screenHeight > 768)
+
+  return $$({
+    isTallScreen,
+  })
+}

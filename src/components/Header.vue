@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { isTallScreen } = useScreen()
+</script>
+
 <template>
   <div class="px-10">
     <div class="relative flex justify-center">

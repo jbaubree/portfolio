@@ -6,6 +6,7 @@ import profile from '~/assets/images/profile.webp'
 import vite from '~/assets/images/vite.svg'
 
 const { t } = useI18n()
+const { isTallScreen } = useScreen()
 
 const skills = $computed(() => [
   {
@@ -97,12 +98,17 @@ const stack = [
     </Container>
   </FullPage>
 
-  <div class="flex justify-center px-10">
-    <Container :class="{ 'md:mb-60': isTallScreen }">
+  <FullPage>
+    <Container>
       <div class="relative">
-        <div class="absolute top-0 left--80">
-          <Logo size="lg" :icon="Cone" />
-        </div>
+        <template v-if="isTallScreen">
+          <div class="absolute top--60 left--20">
+            <Logo size="lg" :icon="Cone" />
+          </div>
+          <div class="absolute bottom--60 right--20">
+            <Logo size="lg" :icon="Cone" />
+          </div>
+        </template>
         <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
           <img
             :src="profile"
@@ -123,7 +129,7 @@ const stack = [
         </div>
       </div>
     </Container>
-  </div>
+  </FullPage>
 
   <FullPage>
     <Container>
