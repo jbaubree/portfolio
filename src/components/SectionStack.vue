@@ -45,6 +45,15 @@ const stack = [
 ]
 
 const show = $ref(false)
+let isHoverEnabled = $ref(false)
+
+watch($$(show), (value) => {
+  if (value) {
+    setTimeout(() => {
+      isHoverEnabled = true
+    }, 1000)
+  }
+})
 </script>
 
 <template>
@@ -67,8 +76,9 @@ const show = $ref(false)
             :key="index"
             :href="stackItem.link"
             target="_blank"
-            class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center group"
+            class="opacity-50 transition-opacity cursor-pointer flex items-center group"
             :class="{
+              'hover:opacity-100': isHoverEnabled,
               'animate-signal': show,
               'animate-delay-0': index === 0,
               'animate-delay-.1s': index === 2,
@@ -90,7 +100,8 @@ const show = $ref(false)
               {{ stackItem.name }}
             </span>
             <div
-              class="i-fa-link h-2rem w-2rem ml-0.5rem invisible group-hover:visible transition-opacity"
+              class="i-fa-link h-2rem w-2rem ml-0.5rem invisible transition-opacity"
+              :class="{ 'group-hover:visible': isHoverEnabled }"
             />
           </a>
         </div>
