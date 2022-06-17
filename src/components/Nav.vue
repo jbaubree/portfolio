@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const { pages } = useScreen()
+const { locale } = useI18n()
+
+const toggleLocale = () => {
+  currentLocale.value = currentLocale.value === 'en' ? 'fr' : 'en'
+  locale.value = currentLocale.value
+}
 
 const navItems = $computed(() => [
   {
@@ -45,7 +51,7 @@ const { isXs } = useTailwindBreakpoints()
 </script>
 
 <template>
-  <div class="flex gap-6 md:gap-8 w-full justify-between sm:w-auto">
+  <div class="flex items-center gap-6 md:gap-8 w-full justify-between sm:w-auto">
     <a
       v-for="navItem, index in navItems"
       :key="navItem.name"
@@ -65,5 +71,12 @@ const { isXs } = useTailwindBreakpoints()
         :class="navItem.icon"
       />
     </a>
+    <div
+      class="text-sm font-semibold cursor-pointer text-primary bg-white hover:bg-primary hover:text-white rounded-2 px-2 py-1 transition-colors"
+      md="text-white bg-opacity-15"
+      @click="toggleLocale()"
+    >
+      {{ locale.toUpperCase() }}
+    </div>
   </div>
 </template>
