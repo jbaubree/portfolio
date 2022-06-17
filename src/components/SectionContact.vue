@@ -16,9 +16,11 @@ import { Torus } from 'troisjs'
           {{ $t('contact.email') }}: <a class="font-semibold" href="mailto:jb.aubree@protonmail.com">jb.aubree@protonmail.com</a>
         </Text>
       </div>
-      <div class="bg-white rounded-12 p-12 text-gray-700 w-full md:w-auto shadow-2xl shadow-primary/30">
-        <ContactForm />
-      </div>
+      <AnimatedComponent animation-type="zoom">
+        <div class="bg-white rounded-12 p-12 text-gray-700 w-full md:w-auto shadow-2xl shadow-primary/30">
+          <ContactForm />
+        </div>
+      </AnimatedComponent>
       <div class="absolute left--20 bottom-0">
         <Logo size="lg" :icon="Torus" />
       </div>

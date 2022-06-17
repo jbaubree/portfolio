@@ -34,15 +34,17 @@ const projects = $computed(() => [
       <Text class="text-gray-700">
         {{ $t('projects.text') }}
       </Text>
-      <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
-        <ProjectCard
-          v-for="project, index in projects"
-          :key="index"
-          :image="project.image"
-          :text="project.text"
-          :link="project.link"
-        />
-      </div>
+      <AnimatedComponent>
+        <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
+          <ProjectCard
+            v-for="project, index in projects"
+            :key="index"
+            :image="project.image"
+            :text="project.text"
+            :link="project.link"
+          />
+        </div>
+      </AnimatedComponent>
     </Container>
   </FullPage>
 </template>

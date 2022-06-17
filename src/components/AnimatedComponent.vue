@@ -15,7 +15,7 @@ const observer = new IntersectionObserver(
     animate = entry.isIntersecting
   },
   {
-    threshold: 0.5,
+    threshold: 0.4,
   },
 )
 
@@ -24,7 +24,7 @@ watch($$(animate), (value) => {
     emit('show')
     observer.disconnect()
   }
-}, { immediate: true })
+})
 
 onMounted(() => {
   observer.observe(target.value)
@@ -40,3 +40,10 @@ onMounted(() => {
     </Transition>
   </div>
 </template>
+
+<style scoped>
+.animated-component.fade-enter-from,
+.animated-component.zoom-enter-from {
+  transition: none;
+}
+</style>
