@@ -46,7 +46,7 @@ const stack = [
 
 const show = $ref(false)
 let isHoverEnabled = $ref(false)
-
+const { isMdAndLarger } = useTailwindBreakpoints()
 watch($$(show), (value) => {
   if (value) {
     setTimeout(() => {
@@ -81,15 +81,15 @@ watch($$(show), (value) => {
               'hover:opacity-100': isHoverEnabled,
               'animate-signal': show,
               'animate-delay-0': index === 0,
-              'animate-delay-.15s': index === 2,
-              'animate-delay-.3s': index === 4,
-              'animate-delay-.45s': index === 6,
-              'animate-delay-.6s': index === 8,
-              'animate-delay-.75s': index === 1,
-              'animate-delay-.9s': index === 3,
-              'animate-delay-1.05s': index === 5,
-              'animate-delay-1.2s': index === 7,
-              'animate-delay-1.35s': index === 9,
+              'animate-delay-.15s': isMdAndLarger ? index === 2 : index === 1,
+              'animate-delay-.3s': isMdAndLarger ? index === 4 : index === 2,
+              'animate-delay-.45s': isMdAndLarger ? index === 6 : index === 3,
+              'animate-delay-.6s': isMdAndLarger ? index === 8 : index === 4,
+              'animate-delay-.75s': isMdAndLarger ? index === 1 : index === 5,
+              'animate-delay-.9s': isMdAndLarger ? index === 3 : index === 6,
+              'animate-delay-1.05s': isMdAndLarger ? index === 5 : index === 7,
+              'animate-delay-1.2s': isMdAndLarger ? index === 7 : index === 8,
+              'animate-delay-1.35s': isMdAndLarger ? index === 9 : index === 9,
             }"
           >
             <span
