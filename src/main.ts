@@ -8,4 +8,5 @@ import 'uno.css'
 
 const app = createApp(App)
 app.use(i18n)
+app.directive('appear', appear)
 app.mount('#app')

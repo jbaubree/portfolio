@@ -25,6 +25,7 @@ export default defineConfig({
       dirs: [
         'src/utils',
         'src/composables',
+        'src/directives',
       ],
       vueTemplate: true,
       dts: true,

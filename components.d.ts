@@ -5,9 +5,9 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AnimatedComponent: typeof import('./src/components/AnimatedComponent.vue')['default']
     ContactForm: typeof import('./src/components/ContactForm.vue')['default']
     Container: typeof import('./src/components/Container.vue')['default']
-    Content: typeof import('./src/components/Content.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     FullPage: typeof import('./src/components/FullPage.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
@@ -17,6 +17,12 @@ declare module '@vue/runtime-core' {
     ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
     ScrollMouse: typeof import('./src/components/ScrollMouse.vue')['default']
     ScrollTop: typeof import('./src/components/ScrollTop.vue')['default']
+    SectionContact: typeof import('./src/components/SectionContact.vue')['default']
+    SectionHero: typeof import('./src/components/SectionHero.vue')['default']
+    SectionProfile: typeof import('./src/components/SectionProfile.vue')['default']
+    SectionProjects: typeof import('./src/components/SectionProjects.vue')['default']
+    SectionServices: typeof import('./src/components/SectionServices.vue')['default']
+    SectionStack: typeof import('./src/components/SectionStack.vue')['default']
     ServiceCard: typeof import('./src/components/ServiceCard.vue')['default']
     Socials: typeof import('./src/components/Socials.vue')['default']
     Text: typeof import('./src/components/Text.vue')['default']

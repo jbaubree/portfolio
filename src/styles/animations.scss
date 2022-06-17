@@ -18,3 +18,13 @@
   75%  { transform: translateY(.75em); opacity: 0; }
   100% { transform: translateY(0); opacity: 0; }
 }
+
+.animate-signal {
+  animation: opacity-signal .75s ease-out;
+}
+
+@keyframes opacity-signal {
+  0% {  opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
