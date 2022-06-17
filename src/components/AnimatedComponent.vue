@@ -20,10 +20,8 @@ const observer = new IntersectionObserver(
 )
 
 watch($$(animate), (value) => {
-  if (value) {
+  if (value)
     emit('show')
-    observer.disconnect()
-  }
 })
 
 onMounted(() => {
