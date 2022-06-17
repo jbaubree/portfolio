@@ -17,7 +17,7 @@ const toggleLocale = () => {
             {{ locale.toUpperCase() }}
           </div>
         </div>
-        <hr class="block md:hidden border w-200px opacity-50">
+        <hr class="block md:hidden bg-white w-200px opacity-50">
         <Nav />
       </Container>
     </div>
