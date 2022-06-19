@@ -24,7 +24,7 @@ watch(isScrolling, (value) => {
 <template>
   <div
     id="header"
-    class="w-full z-5 px-10 fixed flex justify-center bg-black bg-opacity-20 rounded-b-5 backdrop-blur-4 transition-transform duration-500"
+    class="w-full z-5 px-10 fixed flex justify-center bg-#031994 bg-opacity-60 rounded-b-5 backdrop-blur-4 transition-transform duration-500"
     :style="showHeader ? 'transform: translateY(0)' : `transform: translateY(${-headerHeight}px)`"
   >
     <Container
