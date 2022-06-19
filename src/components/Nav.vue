@@ -43,7 +43,8 @@ const navItems = $computed(() => [
 ])
 
 const scrollToSection = (index: number) => {
-  pages.value[index].scrollIntoView({
+  window.scrollTo({
+    top: pages.value[index].offsetTop,
     behavior: 'smooth',
   })
 }

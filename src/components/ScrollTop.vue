@@ -1,19 +1,13 @@
 <script setup lang="ts">
 const { arrivedState } = useScroll(window)
 const { height: footerHeight } = useElementSize(document.getElementById('footer'))
+const { scrollToTop } = useScreen()
 
 let scroll = $ref(scrollY)
 
 window.addEventListener('scroll', () => {
   scroll = scrollY
 })
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
-}
 
 const isArrivedOnBottom = $computed(() => {
   return !!arrivedState.bottom
