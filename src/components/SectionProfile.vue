@@ -13,9 +13,6 @@ const { isTallScreen } = useScreen()
           <div class="absolute top--60 left--20">
             <Logo size="lg" :icon="Cone" />
           </div>
-          <div class="absolute bottom--60 right--20">
-            <Logo size="lg" :icon="Cone" />
-          </div>
         </template>
         <AnimatedComponent :threshold="0.2">
           <div class="relative bg-secondary md:pl-325px px-13 py-15 md:px-24 md:py-29 rounded-12 flex overflow-hidden">
