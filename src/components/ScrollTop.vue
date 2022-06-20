@@ -18,7 +18,6 @@ onMounted(() => {
 <template>
   <Transition>
     <div v-if="scroll > 100">
-      {{ footerShowHeight }}
       <div
         class="z-100 fixed right-1.5rem bottom-1.5rem flex items-center justify-center transition-transform"
         :style="footerShowHeight > 0 ? `transform: translateY(${-footerShowHeight}px)` : 'transform: translateY(0)'"
