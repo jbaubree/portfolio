@@ -2,6 +2,7 @@ import type { Ref } from 'vue'
 
 export function useScreen() {
   const headerSize = ref<{ width: Ref<number>; height: Ref<number> }>()
+  const footerSize = ref<{ width: Ref<number>; height: Ref<number> }>()
   const screenHeight = $computed(() => window.outerHeight)
   const isTallScreen = $computed(() => screenHeight > 768)
   const pages = $computed(() => Array.from(document.querySelectorAll('#page') as NodeListOf<HTMLElement>))
@@ -15,6 +16,7 @@ export function useScreen() {
 
   onMounted(() => {
     headerSize.value = useElementSize(document.getElementById('header'))
+    footerSize.value = useElementSize(document.getElementById('footer'))
   })
 
   return {
@@ -23,6 +25,7 @@ export function useScreen() {
       pages,
     }),
     headerSize,
+    footerSize,
     scrollToTop,
   }
 }
