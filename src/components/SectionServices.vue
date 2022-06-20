@@ -21,29 +21,27 @@ const services = $computed(() => [
 <template>
   <FullPage>
     <Container>
-      <AnimatedComponent :threshold="0.1">
-        <div class="flex items-center justify-center lg:justify-between gap-8">
-          <div class="flex flex-col items-center md:items-start gap-8">
-            <Logo />
-            <Title>{{ $t('services.service', 2) }}</Title>
-            <Text>
-              {{ $t('services.text') }}
-            </Text>
-            <AnimatedComponent>
-              <div class="flex flex-col sm:flex-row gap-8 items-start">
-                <ServiceCard
-                  v-for="service, index in services"
-                  :key="index"
-                  :title="service.title"
-                  :text="service.text"
-                  :tags="service.tags"
-                />
-              </div>
-            </AnimatedComponent>
-          </div>
-          <Logo size="lg" :icon="Tetrahedron" class="!hidden !lg:flex" />
+      <div class="flex items-center justify-center lg:justify-between gap-8">
+        <div class="flex flex-col items-center md:items-start gap-8">
+          <Logo />
+          <Title>{{ $t('services.service', 2) }}</Title>
+          <Text>
+            {{ $t('services.text') }}
+          </Text>
+          <AnimatedComponent>
+            <div class="flex flex-col sm:flex-row gap-8 items-start">
+              <ServiceCard
+                v-for="service, index in services"
+                :key="index"
+                :title="service.title"
+                :text="service.text"
+                :tags="service.tags"
+              />
+            </div>
+          </AnimatedComponent>
         </div>
-      </AnimatedComponent>
+        <Logo size="lg" :icon="Tetrahedron" class="!hidden !lg:flex" />
+      </div>
     </Container>
   </FullPage>
 </template>
