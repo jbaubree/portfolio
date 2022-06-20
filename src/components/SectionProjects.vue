@@ -25,26 +25,28 @@ const projects = $computed(() => [
 </script>
 
 <template>
-  <FullPage background="bg-light-200">
-    <Container class="flex items-center md:items-start flex-col gap-8">
-      <Logo variant="primary" />
-      <Title class="text-primary">
-        {{ $t('projects.project', 2) }}
-      </Title>
-      <Text class="text-gray-700">
-        {{ $t('projects.text') }}
-      </Text>
-      <AnimatedComponent>
-        <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
-          <ProjectCard
-            v-for="project, index in projects"
-            :key="index"
-            :image="project.image"
-            :text="project.text"
-            :link="project.link"
-          />
-        </div>
-      </AnimatedComponent>
-    </Container>
-  </FullPage>
+  <AnimatedComponent>
+    <FullPage background="bg-light-200">
+      <Container class="flex items-center md:items-start flex-col gap-8">
+        <Logo variant="primary" />
+        <Title class="text-primary">
+          {{ $t('projects.project', 2) }}
+        </Title>
+        <Text class="text-gray-700">
+          {{ $t('projects.text') }}
+        </Text>
+        <AnimatedComponent>
+          <div class="w-full flex gap-8 flex-wrap justify-center sm:justify-start z-1">
+            <ProjectCard
+              v-for="project, index in projects"
+              :key="index"
+              :image="project.image"
+              :text="project.text"
+              :link="project.link"
+            />
+          </div>
+        </AnimatedComponent>
+      </Container>
+    </FullPage>
+  </AnimatedComponent>
 </template>

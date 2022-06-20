@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { animationType = 'fade' } = defineProps<{
+const { animationType = 'fade', threshold = 0.4 } = defineProps<{
   animationType?: string
+  threshold?: number
 }>()
 const emit = defineEmits<{
   (eventName: 'show'): void
@@ -15,7 +16,7 @@ const observer = new IntersectionObserver(
     animate = entry.isIntersecting
   },
   {
-    threshold: 0.4,
+    threshold,
   },
 )
 
