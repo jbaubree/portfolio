@@ -19,7 +19,7 @@ onMounted(() => {
   <Transition>
     <div v-if="scroll > 100">
       <div
-        class="z-100 fixed right-1.5rem bottom-1.5rem flex items-center justify-center transition-transform"
+        class="z-100 fixed right-1.5rem bottom-1.5rem flex items-center justify-center"
         :style="footerShowHeight > 0 ? `transform: translateY(${-footerShowHeight}px)` : 'transform: translateY(0)'"
         bg="black"
         w="2.5rem"
