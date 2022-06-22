@@ -44,6 +44,7 @@ export default defineConfig({
       include: [resolve(__dirname, 'locales/**')],
     }),
     VitePWA({
+      registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt'],
       manifest: {
         name: 'JB Aubrée\'s portfolio',
