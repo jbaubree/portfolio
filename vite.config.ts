@@ -6,6 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Sitemap from 'vite-plugin-sitemap'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   resolve: {
@@ -41,6 +42,32 @@ export default defineConfig({
       runtimeOnly: true,
       compositionOnly: true,
       include: [resolve(__dirname, 'locales/**')],
+    }),
+    VitePWA({
+      includeAssets: ['favicon.svg', 'robots.txt'],
+      manifest: {
+        name: 'JB Aubrée\'s portfolio',
+        short_name: 'Portfolio',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
     }),
   ],
 })
