@@ -57,15 +57,19 @@ const { isXs } = useTailwindBreakpoints()
       v-for="navItem, index in navItems"
       :key="navItem.name"
       href="#"
-      class="transition-all shadow-weight md:text-1rem text-sm"
+      class="text-sm relative group"
+      md="text-1rem"
       :class="{
         hidden: navItem.isDisabled,
       }"
       @click.stop.prevent="scrollToSection(index)"
     >
-      <template v-if="!isXs">
+      <span
+        v-if="!isXs"
+        class="after:content-empty after:transition-transform after:border-b-1px after:border-color-white after:absolute after:bottom--4px after:left-0 after:w-full after:scale-x-0 after:origin-right group-hover:after:origin-left group-hover:after:scale-x-100"
+      >
         {{ navItem.name }}
-      </template>
+      </span>
       <div
         v-else
         class="w-6 h-6"
