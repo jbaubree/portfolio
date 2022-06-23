@@ -15,7 +15,7 @@ const elipseSize = $computed(() => {
   const unoCssRatio = 4
   switch (size) {
     case 'sm':
-      return 15 * unoCssRatio
+      return 10 * unoCssRatio
     case 'md':
       return 28 * unoCssRatio
     case 'lg':
@@ -37,7 +37,7 @@ const elipseImage = $computed(() => {
   <div
     class="relative items-center justify-center"
     :class="{
-      'hidden sm:flex min-w-15': size === 'sm',
+      'hidden sm:flex min-w-10': size === 'sm',
       'hidden sm:flex min-w-28': size === 'md',
       'hidden md:flex md:min-w-80 w-80 lg:min-w-100 xl:min-w-110': size === 'lg',
     }"
