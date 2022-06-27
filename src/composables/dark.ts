@@ -1,5 +1,16 @@
 let timer: ReturnType<typeof setTimeout> | undefined
 export const fadeDark = ref(true)
+export const isDark = ref(false)
+
+const toggle = () => {
+  isDark.value = !isDark.value
+
+  const el = window?.document.querySelector('html')
+  if (!el)
+    return
+
+  el.setAttribute('class', isDark.value ? 'dark' : '')
+}
 
 const toggleFade = () => {
   fadeDark.value = false
@@ -10,9 +21,6 @@ const toggleFade = () => {
     fadeDark.value = true
   }, 350)
 }
-
-export const isDark = useDark()
-export const toggle = useToggle(isDark)
 
 export const toggleDark = () => {
   toggleFade()
