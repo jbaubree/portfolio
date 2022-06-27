@@ -27,7 +27,7 @@ const { isTallScreen } = useScreen()
               width="450"
               height="600"
               class="absolute bottom--30 left--20 hidden md-block"
-              :style="isDark.value ? '' : 'filter: sepia(35%) hue-rotate(195deg) saturate(500%);'"
+              :style="isDark ? '' : 'filter: sepia(35%) hue-rotate(195deg) saturate(500%);'"
             >
             <div class="flex flex-col gap-8">
               <Text>{{ $t('profile.title') }}</Text>

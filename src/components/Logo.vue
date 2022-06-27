@@ -86,7 +86,7 @@ const darkColor = $computed(() => {
         <AmbientLight color="#808080" />
         <PointLight :position="{ y: 10, z: 10 }" />
         <component :is="icon" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
-          <PhongMaterial :color="isDark.value ? darkColor : '#ea9804'" :props="{ side: DoubleSide }" />
+          <PhongMaterial :color="isDark ? darkColor : '#ea9804'" :props="{ side: DoubleSide }" />
         </component>
       </Scene>
     </Renderer>

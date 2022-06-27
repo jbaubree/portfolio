@@ -7,7 +7,7 @@ const { headerSize } = useScreen()
 
 <template>
   <FadeInOut :duration="300" mode="out-in">
-    <div v-if="fadeDark.value">
+    <div v-if="fadeDark">
       <Header />
       <div
         class="transition-all bg-transparent"
