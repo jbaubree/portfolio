@@ -9,6 +9,7 @@ const { isTallScreen } = useScreen()
   <div
     id="page"
     class="px-10 py-10 w-full flex items-center justify-center"
+    dark="bg-transparent"
     :class="[{ 'md:h-100vh md:py-0': isTallScreen }, background]"
   >
     <AnimatedComponent :threshold="0.1">

@@ -45,6 +45,7 @@ const sendEmail = () => {
       v-model="form.email"
       type="text"
       class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none"
+      dark="bg-opacity-50 placeholder-#8bbcf6"
       sm="min-w-300px"
       lg="min-w-500px"
       :placeholder="$t('form.your-email')"
@@ -53,6 +54,7 @@ const sendEmail = () => {
       v-model="form.name"
       type="text"
       class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none"
+      dark="bg-opacity-50 placeholder-#8bbcf6"
       sm="min-w-300px"
       lg="min-w-500px"
       :placeholder="$t('form.your-name')"
@@ -61,12 +63,14 @@ const sendEmail = () => {
       v-model="form.message"
       rows="5"
       class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none resize-none"
+      dark="bg-opacity-50 placeholder-#8bbcf6"
       sm="min-w-300px"
       lg="min-w-500px"
       :placeholder="$t('form.message')"
     />
     <button
       class="flex items-center justify-center w-180px h-72px bg-primary rounded-8 px-25 py-6 text-white uppercase font-bold"
+      dark="bg-white text-#8bbcf6"
       :disabled="isLoading"
       @click="sendEmail()"
     >

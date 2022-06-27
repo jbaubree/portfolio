@@ -25,6 +25,7 @@ watch(isScrolling, (value) => {
   <div
     id="header"
     class="w-full z-5 px-10 fixed flex justify-center bg-opacity-75 rounded-b-5 backdrop-blur-6 transition-transform duration-500"
+    dark="bg-transparent"
     :class="y === 0 ? 'bg-transparent' : 'bg-#031994'"
     :style="showHeader ? 'transform: translateY(0)' : `transform: translateY(${-headerHeight}px)`"
   >
@@ -33,6 +34,11 @@ watch(isScrolling, (value) => {
     >
       <Logo size="sm" class="cursor-pointer" @click="scrollToTop" />
       <Nav />
+      <div
+        class="rounded-full w-8 h-8 cursor-pointer flex items-center justify-center"
+        :style="gradientStyle"
+        @click="toggleDark()"
+      />
     </Container>
   </div>
 </template>

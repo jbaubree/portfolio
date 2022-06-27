@@ -28,7 +28,22 @@ const elipseImage = $computed(() => {
     case 'white':
       return elipse
     case 'primary':
-      return elipseBlue
+      return isDark.value ? elipse : elipseBlue
+  }
+})
+
+const darkColor = $computed(() => {
+  switch (icon?.name) {
+    case 'Box':
+      return gradientColors.pink
+    case 'Cone':
+      return gradientColors.violet
+    case 'Tetrahedron':
+      return gradientColors.darkViolet
+    case 'Icosahedron':
+      return gradientColors.darkBlue
+    default:
+      return gradientColors.blue
   }
 })
 </script>
@@ -71,7 +86,7 @@ const elipseImage = $computed(() => {
         <AmbientLight color="#808080" />
         <PointLight :position="{ y: 10, z: 10 }" />
         <component :is="icon" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
-          <PhongMaterial color="#ea9804" :props="{ side: DoubleSide }" />
+          <PhongMaterial :color="isDark.value ? darkColor : '#ea9804'" :props="{ side: DoubleSide }" />
         </component>
       </Scene>
     </Renderer>

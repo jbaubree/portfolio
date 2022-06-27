@@ -7,7 +7,10 @@ const { title, text, tags } = defineProps<{
 </script>
 
 <template>
-  <div class="bg-secondary p-10 rounded-10 flex flex-col gap-8 max-w-18rem">
+  <div
+    class="bg-secondary p-10 rounded-10 flex flex-col gap-8 max-w-18rem"
+    dark="bg-white bg-opacity-35"
+  >
     <span class="text-1.75rem leading-none font-bold">
       {{ title }}
     </span>
@@ -17,6 +20,7 @@ const { title, text, tags } = defineProps<{
         v-for="tag in tags"
         :key="tag"
         class="text-primary whitespace-nowrap bg-white px-2 py-1 rounded-3 font-bold"
+        dark="text-darkViolet"
       >
         {{ tag }}
       </div>

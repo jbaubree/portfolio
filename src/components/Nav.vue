@@ -77,7 +77,7 @@ const { isXs } = useTailwindBreakpoints()
       />
     </a>
     <div
-      class="text-sm font-semibold cursor-pointer text-primary bg-white hover:bg-primary hover:text-white rounded-2 px-2 py-1 transition-colors"
+      class="text-sm font-semibold cursor-pointer text-primary bg-white hover:bg-opacity-50 hover:text-white rounded-2 px-2 py-1 transition-colors"
       sm="text-white bg-opacity-15"
       @click="toggleLocale()"
     >

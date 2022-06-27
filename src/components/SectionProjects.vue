@@ -28,10 +28,10 @@ const projects = $computed(() => [
   <FullPage background="bg-light-200">
     <Container class="flex items-center md:items-start flex-col gap-8">
       <Logo variant="primary" />
-      <Title class="text-primary">
+      <Title class="text-primary" dark="text-white">
         {{ $t('projects.project', 2) }}
       </Title>
-      <Text class="text-gray-700">
+      <Text class="text-gray-700" dark="text-white">
         {{ $t('projects.text') }}
       </Text>
       <AnimatedComponent>
