@@ -15,7 +15,7 @@ specifiers:
   axios: ^0.27.2
   eslint: 8.18.0
   lint-staged: ^13.0.3
-  pnpm: 7.3.0
+  pnpm: 7.4.0
   sass: 1.53.0
   simple-git-hooks: ^2.8.0
   three: ^0.141.0
@@ -51,7 +51,7 @@ devDependencies:
   axios: 0.27.2
   eslint: 8.18.0
   lint-staged: 13.0.3
-  pnpm: 7.3.0
+  pnpm: 7.4.0
   sass: 1.53.0
   simple-git-hooks: 2.8.0
   three: 0.141.0
@@ -5135,8 +5135,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.3.0:
-    resolution: {integrity: sha512-HOXT6V+AznAyjL2Ay3TuuJQucsEguUiKjqyQq4WPPwOpaaILhkKvu8Nn1/OQWGi9V6T7OciyrctAKeYyCha6Ow==}
+  /pnpm/7.4.0:
+    resolution: {integrity: sha512-mlV8dw6b9Ta+u+zhJeBDvf4Io+g9Vg8esCxdfUcVhai00wzrLaAJ7TNE67dzHHukkQZ3nuHmdWqQxvtkrBa5Ig==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true
