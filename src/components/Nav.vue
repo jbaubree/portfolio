@@ -62,6 +62,7 @@ const { isXs } = useTailwindBreakpoints()
       :class="{
         hidden: navItem.isDisabled,
       }"
+      :aria-label="navItem.name"
       @click.stop.prevent="scrollToSection(index)"
     >
       <span
