@@ -35,13 +35,15 @@ watch(isScrolling, (value) => {
       <Logo size="sm" class="cursor-pointer" @click="scrollToTop" />
       <Nav>
         <div
-          class="sm:hidden block rounded-full w-8 h-8 cursor-pointer flex items-center justify-center"
+          class="sm:hidden block rounded-full w-10 h-10 flex items-center justify-center"
+          style="cursor: url('/src/assets/images/cursor.svg') 35 35, pointer;"
           :style="gradientStyle"
           @click="toggleDark()"
         />
       </Nav>
       <div
-        class="sm:flex hidden rounded-full w-8 h-8 cursor-pointer items-center justify-center"
+        class="sm:flex hidden rounded-full w-10 h-10 items-center justify-center"
+        style="cursor: url('/src/assets/images/cursor.svg') 35 35, pointer;"
         :style="gradientStyle"
         @click="toggleDark()"
       />
