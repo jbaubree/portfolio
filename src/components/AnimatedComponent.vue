@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { animationType = 'fade', threshold = 0.4 } = defineProps<{
+const { animationType = 'fade', threshold = 0.4, wrapperClass = '' } = defineProps<{
   animationType?: string
   threshold?: number
+  wrapperClass?: string
 }>()
 const emit = defineEmits<{
   (eventName: 'show'): void
@@ -33,7 +34,7 @@ onMounted(() => {
 <template>
   <div ref="target">
     <Transition :name="animationType">
-      <div v-appear="animate" class="animated-component">
+      <div v-appear="animate" class="animated-component" :class="wrapperClass">
         <slot />
       </div>
     </Transition>

@@ -2,16 +2,15 @@
 import { FadeInOut } from 'vue3-transitions'
 
 const { isMdAndLarger } = useTailwindBreakpoints()
-const { headerSize } = useScreen()
 </script>
 
 <template>
   <FadeInOut :duration="300" mode="out-in">
-    <div v-if="fadeDark">
+    <div v-if="fadeDark" class="m-0 p-0 overflow-hidden" :class="{ 'bg-primary': !isDark }" :style="isDark ? gradientStyle : ''">
       <Header />
       <div
         class="transition-all bg-transparent"
-        :style="`margin-top: ${isMdAndLarger ? '0px' : `${headerSize?.height}px`}; ${gradientStyle}`"
+        :style="`margin-top: ${isMdAndLarger ? '0px' : '20px'};`"
       >
         <SectionHero />
         <SectionProfile />

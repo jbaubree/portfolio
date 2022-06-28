@@ -3,7 +3,7 @@ import { Torus } from 'troisjs'
 </script>
 
 <template>
-  <FullPage background="bg-light-200" class="relative">
+  <FullPage background="bg-light-200" class="relative" animated-wrapper-class="w-full flex justify-between" animated-class="w-full flex justify-center">
     <Container class="flex flex-col items-center md:items-start md:flex-row justify-between items-center w-full gap-8">
       <div class="flex flex-col items-center md:items-start gap-8 z-1">
         <Logo variant="primary" />
