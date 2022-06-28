@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import cursor from '~/assets/images/cursor.svg'
+
 const { isScrolling, y, directions } = useScroll(window)
 const { headerSize, pages } = useScreen()
 const { scrollToTop } = useScreen()
@@ -36,15 +38,15 @@ watch(isScrolling, (value) => {
       <Nav>
         <div
           class="sm:hidden block rounded-full w-10 h-10 flex items-center justify-center"
-          style="cursor: url('/src/assets/images/cursor.svg') 35 35, pointer;"
-          :style="gradientStyle"
+          style="cursor: url(cursor) 35 35, pointer;"
+          :style="`${gradientStyle}; cursor: url(${cursor}) 35 35, pointer`"
           @click="toggleDark()"
         />
       </Nav>
       <div
         class="sm:flex hidden rounded-full w-10 h-10 items-center justify-center"
-        style="cursor: url('/src/assets/images/cursor.svg') 35 35, pointer;"
-        :style="gradientStyle"
+        style="cursor: url(cursor) 35 35, pointer;"
+        :style="`${gradientStyle}; cursor: url(${cursor}) 35 35, pointer`"
         @click="toggleDark()"
       />
     </Container>
