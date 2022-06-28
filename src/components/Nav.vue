@@ -83,5 +83,6 @@ const { isXs } = useTailwindBreakpoints()
     >
       {{ locale.toUpperCase() }}
     </div>
+    <slot />
   </div>
 </template>

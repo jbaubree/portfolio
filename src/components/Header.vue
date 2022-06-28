@@ -33,9 +33,15 @@ watch(isScrolling, (value) => {
       class="flex items-center justify-center sm:justify-between py-6"
     >
       <Logo size="sm" class="cursor-pointer" @click="scrollToTop" />
-      <Nav />
+      <Nav>
+        <div
+          class="sm:hidden block rounded-full w-8 h-8 cursor-pointer flex items-center justify-center"
+          :style="gradientStyle"
+          @click="toggleDark()"
+        />
+      </Nav>
       <div
-        class="rounded-full w-8 h-8 cursor-pointer flex items-center justify-center"
+        class="sm:flex hidden rounded-full w-8 h-8 cursor-pointer items-center justify-center"
         :style="gradientStyle"
         @click="toggleDark()"
       />
