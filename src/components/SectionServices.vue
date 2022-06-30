@@ -4,7 +4,7 @@ import ServiceCard from './ServiceCard.vue'
 
 const { t } = useI18n()
 
-const services = $computed(() => [
+const services = computed(() => [
   {
     title: t('services.titles.web-app'),
     text: t('services.texts.web-app'),

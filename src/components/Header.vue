@@ -5,21 +5,21 @@ const { isScrolling, y, directions } = useScroll(window)
 const { headerSize, pages } = useScreen()
 const { scrollToTop } = useScreen()
 
-let showHeader = $ref(false)
-const headerHeight = $computed(() => headerSize.value?.height || 0)
+const showHeader = ref(false)
+const headerHeight = computed(() => headerSize.value?.height || 0)
 
 watch(directions, (value) => {
   if (value.bottom && y.value > 0)
-    showHeader = false
+    showHeader.value = false
   if (value.top)
-    showHeader = true
+    showHeader.value = true
 })
 
 watch(isScrolling, (value) => {
   if (y.value === 0)
-    showHeader = true
+    showHeader.value = true
   if (!value && y.value !== 0 && typeof pages.value.find(page => page.offsetTop === y.value) !== 'undefined')
-    showHeader = false
+    showHeader.value = false
 }, { immediate: true })
 </script>
 

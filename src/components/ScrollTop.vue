@@ -2,12 +2,12 @@
 const { scrollToTop } = useScreen()
 
 const footer = ref()
-let footerShowHeight = $ref(0)
-let scroll = $ref(scrollY)
+const footerShowHeight = ref(0)
+const scroll = ref(scrollY)
 
 window.addEventListener('scroll', () => {
-  scroll = scrollY
-  footerShowHeight = footer.value ? window.innerHeight - footer.value.getBoundingClientRect().top : 0
+  scroll.value = scrollY
+  footerShowHeight.value = footer.value ? window.innerHeight - footer.value.getBoundingClientRect().top : 0
 })
 
 onMounted(() => {

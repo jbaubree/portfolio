@@ -15,13 +15,12 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue({ reactivityTransform: true }),
+    Vue(),
     AutoImport({
       imports: [
         '@vueuse/core',
         'vue',
         'vue-i18n',
-        'vue/macros',
       ],
       dirs: [
         'src/utils',

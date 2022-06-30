@@ -10,18 +10,18 @@ const emit = defineEmits<{
 }>()
 
 const target = ref()
-let animate = $ref(false)
+const animate = ref(false)
 
 const observer = new IntersectionObserver(
   ([entry]) => {
-    animate = entry.isIntersecting
+    animate.value = entry.isIntersecting
   },
   {
     threshold,
   },
 )
 
-watch($$(animate), (value) => {
+watch(animate, (value) => {
   if (value)
     emit('show')
 })

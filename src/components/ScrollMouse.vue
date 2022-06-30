@@ -2,17 +2,17 @@
 const { isScrolling, y } = useScroll(window)
 const { isMdAndLarger } = useTailwindBreakpoints()
 
-let showScrollIcon = $ref(false)
+const showScrollIcon = ref(false)
 let timer: ReturnType<typeof setTimeout> | undefined
 
 watch(isScrolling, (value) => {
   if (value) {
     clearTimeout(timer)
-    showScrollIcon = false
+    showScrollIcon.value = false
   }
   else if (y.value === 0) {
     timer = setTimeout(() => {
-      showScrollIcon = true
+      showScrollIcon.value = true
     }, 3000)
   }
 }, { immediate: true })

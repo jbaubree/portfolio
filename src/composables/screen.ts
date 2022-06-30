@@ -3,9 +3,9 @@ import type { Ref } from 'vue'
 export function useScreen() {
   const headerSize = ref<{ width: Ref<number>; height: Ref<number> }>()
   const footerSize = ref<{ width: Ref<number>; height: Ref<number> }>()
-  const screenHeight = $computed(() => window.outerHeight)
-  const isTallScreen = $computed(() => screenHeight > 768)
-  const pages = $computed(() => Array.from(document.querySelectorAll('#page') as NodeListOf<HTMLElement>))
+  const screenHeight = computed(() => window.outerHeight)
+  const isTallScreen = computed(() => screenHeight.value > 768)
+  const pages = computed(() => Array.from(document.querySelectorAll('#page') as NodeListOf<HTMLElement>))
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -20,10 +20,8 @@ export function useScreen() {
   })
 
   return {
-    ...$$({
-      isTallScreen,
-      pages,
-    }),
+    isTallScreen,
+    pages,
     headerSize,
     footerSize,
     scrollToTop,

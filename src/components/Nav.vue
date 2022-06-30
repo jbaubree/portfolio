@@ -8,7 +8,7 @@ const toggleLocale = () => {
   locale.value = currentLocale.value
 }
 
-const navItems = $computed(() => [
+const navItems = computed(() => [
   {
     name: t('nav.home'),
     isActive: true,

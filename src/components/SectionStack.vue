@@ -44,13 +44,13 @@ const stack = [
   },
 ]
 
-const show = $ref(false)
-let isHoverEnabled = $ref(false)
+const show = ref(false)
+const isHoverEnabled = ref(false)
 const { isMdAndLarger } = useTailwindBreakpoints()
-watch($$(show), (value) => {
+watch(show, (value) => {
   if (value) {
     setTimeout(() => {
-      isHoverEnabled = true
+      isHoverEnabled.value = true
     }, 1000)
   }
 })

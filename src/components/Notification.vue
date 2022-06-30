@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const bus = useEventBus<string>('contact-form')
 const notifications = ref<{ isSuccess: boolean; popped: boolean; id: number }[]>([])
-let id = $ref(0)
+const id = ref(0)
 
 const togglePopNotification = (id: number) => {
   notifications.value[notifications.value.findIndex(notification => notification.id === id)].popped = !notifications.value[notifications.value.findIndex(notification => notification.id === id)].popped
 }
 
 const listener = (event: string) => {
-  const notificationId = id++
+  const notificationId = id.value++
   notifications.value.push({
     isSuccess: !!event,
     popped: false,
@@ -24,8 +24,8 @@ const listener = (event: string) => {
 
 const unsubscribe = bus.on(listener)
 
-const sortedNotifications = $computed(() => notifications.value.sort(notification => notification.popped ? -1 : 1))
-const poppedNotifications = $computed(() => notifications.value.filter(notification => notification.popped))
+const sortedNotifications = computed(() => notifications.value.sort(notification => notification.popped ? -1 : 1))
+const poppedNotifications = computed(() => notifications.value.filter(notification => notification.popped))
 
 onUnmounted(() => unsubscribe())
 </script>

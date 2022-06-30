@@ -11,7 +11,7 @@ const { icon, size = 'md', variant = 'white' } = defineProps<{
   variant?: 'primary' | 'white'
 }>()
 
-const elipseSize = $computed(() => {
+const elipseSize = computed(() => {
   const unoCssRatio = 4
   switch (size) {
     case 'sm':
@@ -23,7 +23,7 @@ const elipseSize = $computed(() => {
   }
 })
 
-const elipseImage = $computed(() => {
+const elipseImage = computed(() => {
   switch (variant) {
     case 'white':
       return elipse
@@ -32,7 +32,7 @@ const elipseImage = $computed(() => {
   }
 })
 
-const darkColor = $computed(() => {
+const darkColor = computed(() => {
   switch (icon?.name) {
     case 'Box':
       return gradientColors.pink

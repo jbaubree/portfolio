@@ -5,7 +5,7 @@ import vite from '~/assets/images/vite.svg'
 
 const { t } = useI18n()
 
-const projects = $computed(() => [
+const projects = computed(() => [
   {
     image: portfolio,
     text: t('projects.texts.portfolio'),
