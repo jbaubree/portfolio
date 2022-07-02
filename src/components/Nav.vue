@@ -57,8 +57,7 @@ const { isXs } = useTailwindBreakpoints()
       v-for="navItem, index in navItems"
       :key="navItem.name"
       href="#"
-      class="text-sm relative group"
-      md="text-1rem"
+      class="text-size-[clamp(0.8rem,0.1rem+1vw,1rem)] relative group"
       :class="{
         hidden: navItem.isDisabled,
       }"

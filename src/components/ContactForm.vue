@@ -43,28 +43,22 @@ const sendEmail = () => {
     <input
       v-model="form.email"
       type="text"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none"
+      class="min-w-[clamp(11rem,13rem+20vw,31rem)] w-full bg-light-200 rounded-8 p-6 outline-none"
       dark="bg-opacity-50 placeholder-#8bbcf6"
-      sm="min-w-300px"
-      lg="min-w-500px"
       :placeholder="$t('form.your-email')"
     >
     <input
       v-model="form.name"
       type="text"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none"
+      class="min-w-[clamp(11rem,13rem+20vw,31rem)] w-full bg-light-200 rounded-8 p-6 outline-none"
       dark="bg-opacity-50 placeholder-#8bbcf6"
-      sm="min-w-300px"
-      lg="min-w-500px"
       :placeholder="$t('form.your-name')"
     >
     <textarea
       v-model="form.message"
       rows="5"
-      class="w-full bg-light-200 rounded-8 p-6 min-w-180px outline-none resize-none"
+      class="min-w-[clamp(11rem,13rem+20vw,31rem)] w-full bg-light-200 rounded-8 p-6 outline-none resize-none"
       dark="bg-opacity-50 placeholder-#8bbcf6"
-      sm="min-w-300px"
-      lg="min-w-500px"
       :placeholder="$t('form.message')"
     />
     <button

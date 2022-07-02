@@ -93,9 +93,7 @@ watch(show, (value) => {
             }"
           >
             <span
-              class="text-13 leading-11 font-bold uppercase overflow-hidden"
-              lg="text-17 leading-15"
-              xl="text-20 leading-18"
+              class="font-bold uppercase overflow-hidden text-size-[clamp(3.25rem,2rem+3vw,5rem)] leading-[clamp(2.75rem,2rem+3vw,4.5rem)]"
             >
               {{ stackItem.name }}
             </span>

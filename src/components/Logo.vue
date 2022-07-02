@@ -54,7 +54,7 @@ const darkColor = computed(() => {
     :class="{
       'hidden sm:flex min-w-10': size === 'sm',
       'hidden sm:flex min-w-28': size === 'md',
-      'hidden md:flex md:min-w-80 w-80 lg:min-w-100 xl:min-w-110': size === 'lg',
+      'hidden md:flex w-[clamp(20rem,15rem+10vw,27.5rem)] min-w-[clamp(20rem,15rem+10vw,27.5rem)]': size === 'lg',
     }"
   >
     <img

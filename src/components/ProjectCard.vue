@@ -7,7 +7,7 @@ const { image, text, link } = defineProps<{
 </script>
 
 <template>
-  <div class="max-w-250px lg:max-w-300px xl:max-w-350px rounded-8 overflow-hidden group relative">
+  <div class="max-w-[clamp(250px,7rem+10vw,350px)] rounded-8 overflow-hidden group relative">
     <img
       class="w-full h-full object-cover"
       :src="image"

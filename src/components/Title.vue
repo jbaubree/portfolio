@@ -1,9 +1,6 @@
 <template>
   <span
-    class="text-2rem leading-11 font-bold"
-    sm="text-2.75rem leading-15"
-    lg="text-3.5rem leading-18"
-    xl="text-4rem leading-20"
+    class=" font-bold text-size-[clamp(2.75rem,1rem+3vw,4rem)] leading-[clamp(2.75rem,1rem+3vw,5rem)]"
   >
     <slot />
   </span>

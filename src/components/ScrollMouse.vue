@@ -21,9 +21,7 @@ watch(isScrolling, (value) => {
 <template>
   <Transition>
     <div v-if="showScrollIcon && isMdAndLarger" class="z-100 fixed bottom-10 left-50% translate-x--50%">
-      <span
-        class="block relative h-3.25rem w-2rem rounded-1rem border border-.22rem border-white"
-      >
+      <span class="block relative h-3.25rem w-2rem rounded-1rem border border-.22rem border-white">
         <span
           class="animate-dot block absolute left-50% h-.5rem w-.5rem top-.6rem ml--.25rem rounded-full backface-hidden bg-white"
         />
