@@ -18,7 +18,7 @@ import { Torus } from 'troisjs'
       </div>
       <AnimatedComponent>
         <div
-          class="bg-white rounded-12 p-12 text-gray-700 w-full shadow-2xl shadow-primary/30"
+          class="bg-white p-12 text-gray-700 w-full rounded-12 shadow-2xl shadow-primary/30"
           md="w-auto"
           dark="bg-white bg-opacity-35"
         >

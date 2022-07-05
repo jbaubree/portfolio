@@ -98,7 +98,7 @@ watch(show, (value) => {
               {{ stackItem.name }}
             </span>
             <div
-              class="i-fa-link h-2rem w-2rem ml-0.5rem invisible transition-opacity"
+              class="hidden lg:block i-fa-link h-2rem w-2rem ml-0.5rem invisible transition-opacity"
               :class="{ 'group-hover:visible': isHoverEnabled }"
             />
           </a>
