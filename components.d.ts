@@ -3,6 +3,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AnimatedComponent: typeof import('./src/components/AnimatedComponent.vue')['default']
@@ -28,6 +30,5 @@ declare module '@vue/runtime-core' {
     Text: typeof import('./src/components/Text.vue')['default']
     Title: typeof import('./src/components/Title.vue')['default']
   }
-}
 
-export {}
+}

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const { animationType = 'fade', threshold = 0.4, wrapperClass = '' } = defineProps<{
-  animationType?: string
+const { threshold = 0.4, wrapperClass = '' } = defineProps<{
   threshold?: number
   wrapperClass?: string
 }>()
@@ -33,7 +32,7 @@ onMounted(() => {
 
 <template>
   <div ref="target">
-    <Transition :name="animationType">
+    <Transition name="fade">
       <div v-appear="animate" class="animated-component" :class="wrapperClass">
         <slot />
       </div>
