@@ -37,7 +37,7 @@ watch(isScrolling, (value) => {
       <Logo size="sm" class="cursor-pointer" @click="scrollToTop" />
       <Nav>
         <div
-          class="sm:hidden block rounded-full w-10 h-10 flex items-center justify-center"
+          class="sm:hidden block rounded-full min-w-6 min-h-6 flex items-center justify-center"
           style="cursor: url(cursor) 35 35, pointer;"
           :style="`${gradientStyle}; cursor: url(${cursor}) 35 35, pointer`"
           @click="toggleDark()"

@@ -72,13 +72,13 @@ const { isXs } = useTailwindBreakpoints()
       </span>
       <div
         v-else
-        class="w-6 h-6"
+        class="w-5 h-5"
         :class="navItem.icon"
       />
     </a>
     <div
-      class="text-sm font-semibold cursor-pointer text-primary bg-white hover:bg-opacity-50 hover:text-white rounded-2 px-2 py-1 transition-colors"
-      sm="text-white bg-opacity-15"
+      class="text-xs font-semibold cursor-pointer text-primary bg-white hover:bg-opacity-50 hover:text-white rounded-2 px-1.5 py-.75 transition-colors"
+      sm="text-white bg-opacity-15 text-sm px-2 py-1"
       @click="toggleLocale()"
     >
       {{ locale.toUpperCase() }}
