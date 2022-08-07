@@ -5,7 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Sitemap from 'vite-plugin-sitemap'
-import { vueI18n as VueI18n } from '@intlify/vite-plugin-vue-i18n'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
